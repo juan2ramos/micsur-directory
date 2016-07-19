@@ -1,0 +1,214 @@
+.Header
+  width: 100%
+
+  background: #67b9e5
+  background: -moz-linear-gradient(left,  #67b9e5 29%, #e85125 29%)
+  background: -webkit-linear-gradient(left,  #67b9e5 29%,#e85125 29%)
+  background: linear-gradient(to right,  #67b9e5 29%,#e85125 29%)
+  position: relative
+  height: 31.45rem
+  @include respond-to(middle)
+    height: 31.45rem
+
+.Header-network
+  text-align: center
+  position: relative
+  z-index: 10
+  padding-top: 2rem
+  @include respond-to(middle)
+    padding-top: 0
+    display: block
+  & li
+    font-size: 1.5rem
+    margin: 1rem .5rem
+    display: inline-block
+    vertical-align: middle
+  & a
+    color: #fff
+    width: 1rem
+    display: block
+
+.Header-search
+  position: absolute
+  right: 12.5rem
+  top: 1rem
+  display: none
+
+  & button
+  // background: url(../images/search.svg) no-repeat
+   border: none
+   width: 1.7rem
+   height: 1.7rem
+   top: .35rem
+   left: .5rem
+   position: absolute
+  & input[type = 'text']
+    text-transform: uppercase
+    background: rgba(255, 255, 255, .4)
+    border: none
+    padding: .6rem 0 0 2.5rem
+    font-size: .8rem
+    height: 2.25rem
+    width: 15.5rem
+
+.Header-contentNav
+  position: fixed
+  right: 50%
+  width: 12rem
+  top: 0
+  color: #fff
+  z-index: 100000
+  background: #F1D100
+  margin-right: -96px
+  @include transition(all .8s)
+  @include transform(translateY(-30rem))
+  @include respond-to(small)
+    margin-right: 0
+    @include transform(translateY(0))
+    position: absolute
+    right: 0
+    width: 12.5rem
+    z-index: 10
+  &.show
+    @include transform(translateY(0))
+
+.Header-menu
+  cursor: pointer
+  background: rgba(33, 25, 21, 0.35)
+  padding: 1.5rem .7rem 0
+  font-size: 2rem
+  font-weight: 100
+  font-family: -webkit-pictograph
+  line-height: .8em
+  position: fixed
+  color: white
+  top: 0
+  left: 50%
+  z-index: 100001
+  display: block
+  margin-left: -22px
+  @include respond-to(small)
+    display: none
+  & span
+    display: inline-block
+    @include transition(all .8s)
+    &.rotate
+      @include transform(rotate(315deg))
+
+.Header-contentNavPlus
+  display: none
+  vertical-align: middle
+  background: rgba(33, 25, 21, 0.35)
+  padding: 1.5rem .3rem 0
+  font-size: 2rem
+  font-weight: 100
+  font-family: -webkit-pictograph
+  margin: 0 .7rem 0 1.5rem
+  line-height: .8em
+  @include respond-to(small)
+    display: inline-block
+
+.Header-contentNavLanguages
+  display: block
+  text-align: center
+  vertical-align: bottom
+  margin: 3.7rem auto .4rem
+  text-align: center
+  width: 100%
+  @include respond-to(small)
+    display: inline-block
+    margin: auto
+    margin: 1rem auto 0.63rem
+  & a
+    color: black
+  & li
+    display: inline-block
+    vertical-align: middle
+    border-right: .125rem #8CB3D9 solid
+    padding: 0 .5rem 0 .3rem
+    line-height: 1.2em
+    &:last-child
+      border: none
+
+.Header-contentNavLogo
+  display: inline-block
+  vertical-align: middle
+  width: 100%
+  text-align: right
+  margin: 1.5rem 0
+  display: none
+  @include respond-to(small)
+    display: block
+
+.Header-nav
+  margin-bottom: 2rem
+  & a
+    color: #000
+    display: block
+    padding: 0.4rem 1.5rem
+    &:hover
+      color: white
+      background: black
+  & li
+    text-transform: uppercase
+
+.Header-map
+  background: url("http://micsur.org/wp-content/themes/micsur2016/assets/images/map.svg") no-repeat
+  position: absolute
+  left: calc(50vw - 32.5rem)
+  top: 1rem
+  height: 58rem
+  width: 40rem
+  display: none
+  @include respond-to(medium)
+    display: block
+
+.Header-right
+  position: absolute
+  top: 33rem
+  right: 2rem
+  color: white
+  font-family: 'din'
+  font-size: 2.5rem
+  line-height: 1em
+  text-align: center
+  @include respond-to(medium)
+    top: 17rem
+    right: 17rem
+  & span
+    display: block
+    font-size: 3rem
+
+.Header-micsurColor
+  position: relative
+  top: 5rem
+  left: 5.4rem
+  max-width: 21rem
+
+.Header-Homepage
+  height: 24.45rem
+  //background: url(../images/background-color.jpg) no-repeat #E45A01
+  background-size: cover
+  @include respond-to(small)
+    height: 39.45rem
+  @include respond-to(medium)
+    height: 28.3rem
+    background-size: inherit
+  & .Header-logoCenterTablet
+    max-width: 20rem
+    margin: auto
+    display: none
+    @include respond-to(small)
+      max-width: 100%
+  & .Header-right
+    top: 18rem
+    width: 100%
+    right: 0
+    @include respond-to(small)
+      top: 33rem
+      right: 2rem
+      width: auto
+    @include respond-to(large)
+      top: 17rem
+      right: 17rem
+
