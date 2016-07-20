@@ -439,6 +439,10 @@ main {
   -ms-flex-align: start;
   align-items: flex-start; }
 
+.top-element {
+  -ms-flex-item-align: start;
+  align-self: flex-start; }
+
 .middle {
   -ms-flex-align: center;
   align-items: center; }
@@ -446,6 +450,10 @@ main {
 .bottom {
   -ms-flex-align: end;
   align-items: flex-end; }
+
+.bottom-element {
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
 
 .around {
   -ms-flex-pack: distribute;

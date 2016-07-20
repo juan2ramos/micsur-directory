@@ -6,7 +6,7 @@
 $widthContent: 80rem
 $orange : #C75809
 $yellow  : #F1D100
-
+$gray : rgb(109, 110, 113)
 main
   max-width: $widthContent
   margin: 2rem auto
@@ -16,17 +16,37 @@ body
   font-size: .875rem
 
 .Form-register
-  max-width: 60rem
+  max-width: 50rem
   margin: 9rem auto
+  font-size: rem(18)
+  color: $gray
+  label
+    margin: rem(6) 0
+  input, select, textarea
+    border: rem(2) $gray solid
+    height: rem(32)
+    width: 100%
+  textarea
+    height: rem(150)
   h1
-    font-size: 2rem
+    font-size: 1.8rem
     font-weight: 300
-    color: rgb(109, 110, 113)
+    color: $gray
     b
       display: block
       font-weight: bold
+.Form-figure-user
+  border: rem(2) solid $gray
+  height: rem(180)
+  max-width: rem(180)
 
-
+.Form-contentImageUser
+  padding: 0 0 0 rem(10)
+.Form-hr
+  border: none
+  height: rem(2)
+  background: $gray
+  margin: rem(16) 0
 .Footer
   max-width: 65rem
   margin: auto
