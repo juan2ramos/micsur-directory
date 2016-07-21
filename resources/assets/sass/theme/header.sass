@@ -1,15 +1,14 @@
 .Header
   width: 100%
-
-  background: #67b9e5
-  background: -moz-linear-gradient(left,  #67b9e5 29%, #e85125 29%)
-  background: -webkit-linear-gradient(left,  #67b9e5 29%,#e85125 29%)
-  background: linear-gradient(to right,  #67b9e5 29%,#e85125 29%)
+  background: #fdd200
   position: relative
   height: 31.45rem
-  @include respond-to(middle)
+  @include respond-to(medium)
     height: 31.45rem
-
+    background: #67b9e5
+    background: -moz-linear-gradient(left,  #67b9e5 29%, #e85125 29%)
+    background: -webkit-linear-gradient(left,  #67b9e5 29%,#e85125 29%)
+    background: linear-gradient(to right,  #67b9e5 29%,#e85125 29%)
 .Header-network
   text-align: center
   position: relative
@@ -197,18 +196,10 @@
   & .Header-logoCenterTablet
     max-width: 20rem
     margin: auto
-    display: none
-    @include respond-to(small)
+    display: block
+    padding: 0 rem(20)
+    @include respond-to(medium)
       max-width: 100%
-  & .Header-right
-    top: 18rem
-    width: 100%
-    right: 0
-    @include respond-to(small)
-      top: 33rem
-      right: 2rem
-      width: auto
-    @include respond-to(large)
-      top: 17rem
-      right: 17rem
+      display: none
+
 

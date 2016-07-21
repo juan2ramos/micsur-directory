@@ -14,34 +14,51 @@ main
 body
   color: $greenDark
   font-size: .875rem
-
 .Form-register
   max-width: 50rem
-  margin: 9rem auto
+  margin: 1rem auto
   font-size: rem(18)
   color: $gray
+  padding: 0 rem(20)
+  @include respond-to(medium)
+    padding: 0
+    margin: 9rem auto
   label
     margin: rem(6) 0
   input, select, textarea
     border: rem(2) $gray solid
     height: rem(32)
     width: 100%
+    padding: 0 rem(4)
+    font-size: rem(14)
   textarea
     height: rem(150)
+    padding-top: rem(4)
   h1
-    font-size: 1.8rem
+    font-size: 1.4rem
     font-weight: 300
     color: $gray
+    @include respond-to(medium)
+      font-size: 1.8rem
     b
       display: block
       font-weight: bold
+#image-profile
+  min-height: 100%
+  width: 100%
+  opacity: 0
+  cursor: pointer
 .Form-figure-user
   border: rem(2) solid $gray
   height: rem(180)
   max-width: rem(180)
-
+  cursor: pointer
 .Form-contentImageUser
-  padding: 0 0 0 rem(10)
+  margin-top: rem(15)
+  @include respond-to(medium)
+    padding: 0 0 0 rem(20)
+  div
+    margin-bottom: rem(7)
 .Form-hr
   border: none
   height: rem(2)
