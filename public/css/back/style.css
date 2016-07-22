@@ -532,214 +532,62 @@ main {
 .icon-twitter:before {
   content: "\e601"; }
 
+.Footer {
+  max-width: 65rem;
+  margin: auto;
+  position: relative; }
+  .Footer a {
+    display: block;
+    text-align: right;
+    width: 50%;
+    border-bottom: .125rem solid #000;
+    color: #000;
+    font-size: 1.5rem;
+    padding-bottom: .2rem;
+    margin: 4rem 0 2rem; }
+
 .Header {
   width: 100%;
   background: #fdd200;
-  position: relative;
-  height: 31.45rem; }
-  @media (min-width: 45rem) {
-    .Header {
-      height: 31.45rem;
-      background: #67b9e5;
-      background: linear-gradient(to right, #67b9e5 29%, #e85125 29%); } }
+  position: relative; }
+  .Header figure {
+    max-width: 11.25rem; }
 
-.Header-network {
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  padding-top: 2rem; }
-  .Header-network li {
-    font-size: 1.5rem;
-    margin: 1rem .5rem;
-    display: inline-block;
-    vertical-align: middle; }
-  .Header-network a {
-    color: #fff;
-    width: 1rem;
-    display: block; }
-
-.Header-search {
-  position: absolute;
-  right: 12.5rem;
-  top: 1rem;
-  display: none; }
-  .Header-search input[type='text'] {
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    padding: .6rem 0 0 2.5rem;
-    font-size: .8rem;
-    height: 2.25rem;
-    width: 15.5rem; }
-
-.Header-contentNav {
-  position: fixed;
-  right: 50%;
-  width: 12rem;
-  top: 0;
-  color: #fff;
-  z-index: 100000;
-  background: #F1D100;
-  margin-right: -96px;
-  transition: all 0.8s;
-  transform: translateY(-30rem); }
-  @media (min-width: 36rem) {
-    .Header-contentNav {
-      margin-right: 0;
-      transform: translateY(0);
-      position: absolute;
-      right: 0;
-      width: 12.5rem;
-      z-index: 10; } }
-  .Header-contentNav.show {
-    transform: translateY(0); }
-
-.Header-menu {
-  cursor: pointer;
-  background: rgba(33, 25, 21, 0.35);
-  padding: 1.5rem .7rem 0;
-  font-size: 2rem;
-  font-weight: 100;
-  font-family: -webkit-pictograph;
-  line-height: .8em;
-  position: fixed;
-  color: white;
-  top: 0;
-  left: 50%;
-  z-index: 100001;
-  display: block;
-  margin-left: -22px; }
-  @media (min-width: 36rem) {
-    .Header-menu {
-      display: none; } }
-  .Header-menu span {
-    display: inline-block;
-    transition: all 0.8s; }
-    .Header-menu span.rotate {
-      transform: rotate(315deg); }
-
-.Header-contentNavPlus {
-  display: none;
-  vertical-align: middle;
-  background: rgba(33, 25, 21, 0.35);
-  padding: 1.5rem .3rem 0;
-  font-size: 2rem;
-  font-weight: 100;
-  font-family: -webkit-pictograph;
-  margin: 0 .7rem 0 1.5rem;
-  line-height: .8em; }
-  @media (min-width: 36rem) {
-    .Header-contentNavPlus {
-      display: inline-block; } }
-
-.Header-contentNavLanguages {
-  display: block;
-  text-align: center;
-  vertical-align: bottom;
-  margin: 3.7rem auto .4rem;
-  text-align: center;
-  width: 100%; }
-  @media (min-width: 36rem) {
-    .Header-contentNavLanguages {
-      display: inline-block;
-      margin: auto;
-      margin: 1rem auto 0.63rem; } }
-  .Header-contentNavLanguages a {
-    color: black; }
-  .Header-contentNavLanguages li {
-    display: inline-block;
-    vertical-align: middle;
-    border-right: .125rem #8CB3D9 solid;
-    padding: 0 .5rem 0 .3rem;
-    line-height: 1.2em; }
-    .Header-contentNavLanguages li:last-child {
-      border: none; }
-
-.Header-contentNavLogo {
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  text-align: right;
-  margin: 1.5rem 0;
-  display: none; }
-  @media (min-width: 36rem) {
-    .Header-contentNavLogo {
-      display: block; } }
-
-.Header-nav {
-  margin-bottom: 2rem; }
-  .Header-nav a {
-    color: #000;
-    display: block;
-    padding: 0.4rem 1.5rem; }
-    .Header-nav a:hover {
-      color: white;
-      background: black; }
-  .Header-nav li {
-    text-transform: uppercase; }
-
-.Header-map {
-  background: url("http://micsur.org/wp-content/themes/micsur2016/assets/images/map.svg") no-repeat;
-  position: absolute;
-  left: calc(50vw - 32.5rem);
-  top: 1rem;
-  height: 58rem;
-  width: 40rem;
-  display: none; }
-  @media (min-width: 45rem) {
-    .Header-map {
-      display: block; } }
-
-.Header-right {
-  position: absolute;
-  top: 33rem;
-  right: 2rem;
-  color: white;
-  font-family: 'din';
-  font-size: 2.5rem;
-  line-height: 1em;
-  text-align: center; }
-  @media (min-width: 45rem) {
-    .Header-right {
-      top: 17rem;
-      right: 17rem; } }
-  .Header-right span {
-    display: block;
-    font-size: 3rem; }
-
-.Header-micsurColor {
-  position: relative;
-  top: 5rem;
-  left: 5.4rem;
-  max-width: 21rem; }
-
-.Header-Homepage {
-  height: 24.45rem;
-  background-size: cover; }
-  @media (min-width: 36rem) {
-    .Header-Homepage {
-      height: 39.45rem; } }
-  @media (min-width: 45rem) {
-    .Header-Homepage {
-      height: 28.3rem;
-      background-size: inherit; } }
-  .Header-Homepage .Header-logoCenterTablet {
-    max-width: 20rem;
-    margin: auto;
-    display: block;
-    padding: 0 1.875rem; }
-    @media (min-width: 45rem) {
-      .Header-Homepage .Header-logoCenterTablet {
-        max-width: 100%;
-        display: none; } }
+.Header-content {
+  max-width: 60rem;
+  margin: auto;
+  padding: 0.3125rem 0 0.9375rem 0; }
 
 main {
-  max-width: 80rem;
+  max-width: 60rem;
   margin: 2rem auto;
   position: relative; }
 
 body {
-  color: #27383F;
   font-size: .875rem; }
+
+.Nav-back a {
+  padding: 0.5rem;
+  color: black;
+  font-size: 1rem;
+  font-weight: 500; }
+
+.Pay h1 {
+  font-size: 1.625rem;
+  color: #6d6e71; }
+
+.Pay p {
+  font-size: 1rem;
+  color: #6d6e71; }
+
+.Pay .user {
+  text-transform: capitalize; }
+
+.Pay button {
+  padding: 0.625rem 3.125rem;
+  background: #67b9e5;
+  margin: 1.25rem 0;
+  color: white;
+  font-size: 0.875rem; }
 
 /*# sourceMappingURL=style.css.map */

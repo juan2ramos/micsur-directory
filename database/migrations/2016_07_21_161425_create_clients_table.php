@@ -16,10 +16,15 @@ class CreateClientsTable extends Migration
             $table->increments('id');
             $table->string('company');
             $table->string('activities');
-            $table->string('what-i-do');
+            $table->text('what-i-do');
             $table->string('website');
             $table->string('mobile');
             $table->string('phone');
+            $table->integer('validate');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
 
@@ -32,6 +37,6 @@ class CreateClientsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('clients');
     }
 }

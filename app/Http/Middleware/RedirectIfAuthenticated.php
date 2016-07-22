@@ -18,9 +18,10 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/');
+            if (Auth::user()->role_id == 2 )
+                return redirect('finalizar-pago');
+            return redirect('admin');
         }
-
         return $next($request);
     }
 }

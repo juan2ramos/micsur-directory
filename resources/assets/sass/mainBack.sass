@@ -1,5 +1,48 @@
 @import "lib/settings"
 @import "lib/general"
 @import "lib/grid"
+@import "lib/font"
+@import "theme/footer"
+$widthContent: 60rem
+$orange : #C75809
+$yellow  : #F1D100
+$gray : rgb(109, 110, 113)
 
+.Header
+  width: 100%
+  background: #fdd200
+  position: relative
+  figure
+    max-width: rem(180)
+.Header-content
+  max-width: $widthContent
+  margin: auto
+  padding: rem(5) 0  rem(15) 0
+main
+  max-width: $widthContent
+  margin: 2rem auto
+  position: relative
+body
+  font-size: .875rem
 
+.Nav-back
+  a
+    padding: rem(8)
+    color: black
+    font-size: rem(16)
+    font-weight: 500
+.Pay
+  h1
+    font-size: rem(26)
+    color: #6d6e71
+  p
+    font-size: rem(16)
+    color: #6d6e71
+  .user
+    text-transform: capitalize
+  button
+    padding: rem(10) rem(50)
+    background: #67b9e5
+    margin: rem(20) 0
+    color: white
+    font-size: rem(14)

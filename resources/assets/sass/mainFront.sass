@@ -3,6 +3,7 @@
 @import "lib/grid"
 @import "lib/font"
 @import "theme/header"
+@import "theme/footer"
 $widthContent: 80rem
 $orange : #C75809
 $yellow  : #F1D100
@@ -20,17 +21,33 @@ body
   font-size: rem(18)
   color: $gray
   padding: 0 rem(20)
+  button
+    padding: rem(10) rem(50)
+    background: #67b9e5
+    margin: rem(20) 0
+    color: white
+    font-size: rem(14)
   @include respond-to(medium)
     padding: 0
     margin: 9rem auto
   label
     margin: rem(6) 0
+    p
+      margin: rem(4) 0 rem(8)
+      text-align: right
+      width: 100%
+      color: red
+      font-size: rem(14)
+      & ~ input,& ~ select,& ~ textarea
+        border: rem(2) red solid
   input, select, textarea
     border: rem(2) $gray solid
     height: rem(32)
     width: 100%
     padding: 0 rem(4)
     font-size: rem(14)
+    &.error
+      border: rem(2) red solid
   textarea
     height: rem(150)
     padding-top: rem(4)
@@ -64,16 +81,3 @@ body
   height: rem(2)
   background: $gray
   margin: rem(16) 0
-.Footer
-  max-width: 65rem
-  margin: auto
-  position: relative
-  a
-    display: block
-    text-align: right
-    width: 50%
-    border-bottom: .125rem solid #000
-    color: #000
-    font-size: 1.5rem
-    padding-bottom: .2rem
-    margin: 4rem 0 2rem

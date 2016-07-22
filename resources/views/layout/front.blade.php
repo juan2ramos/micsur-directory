@@ -15,8 +15,11 @@
 <header class="Header Header-Homepage" style="">
     <div class="Header-menu"><span>+</span></div>
     <ul class="Header-network">
-        <li><a href="https://www.facebook.com/Mercado-de-Industrias-Culturales-del-Sur-651468871554281/?ref=hl" target="_blank" class="">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30.7" style="enable-background:new 0 0 15.7 30.7;" xml:space="preserve">
+        <li><a href="https://www.facebook.com/Mercado-de-Industrias-Culturales-del-Sur-651468871554281/?ref=hl"
+               target="_blank" class="">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15.7 30.7"
+                     style="enable-background:new 0 0 15.7 30.7;" xml:space="preserve">
 <style type="text/css">
     .st0 {
         fill: #FFFFFF;
@@ -27,7 +30,9 @@
 </svg>
             </a></li>
         <li><a href="https://twitter.com/mic_sur" target="_blank" style="width: 1.8rem;margin-top: 5px;">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7" style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7"
+                     style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
 <style type="text/css">
     .st0 {
         fill: #FFFFFF;
@@ -40,8 +45,11 @@
 </svg>
 
             </a></li>
-        <li><a href="https://www.instagram.com/micsur2016/" target="_blank" class="" style="width: 1.8rem;margin-top: 5px;">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7" style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
+        <li><a href="https://www.instagram.com/micsur2016/" target="_blank" class=""
+               style="width: 1.8rem;margin-top: 5px;">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7"
+                     style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
 <style type="text/css">
     .st0 {
         fill: #FFFFFF;
@@ -59,8 +67,11 @@
 </svg>
 
             </a></li>
-        <li><a href=" https://www.youtube.com/channel/UCVSLZTGR3SVxD854zrptXwQ" target="_blank" style="width: 1.8rem;margin-top: 5px;">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7" style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
+        <li><a href=" https://www.youtube.com/channel/UCVSLZTGR3SVxD854zrptXwQ" target="_blank"
+               style="width: 1.8rem;margin-top: 5px;">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29 30.7"
+                     style="enable-background:new 0 0 29 30.7;" xml:space="preserve">
 <style type="text/css">
     .st0 {
         fill: #FFFFFF;
@@ -75,43 +86,31 @@
 </svg>
             </a></li>
     </ul>
-    <div class="Header-search">
 
-        <div class="" "searchfooter"=""><form role="search" method="get" action="http://micsur.org/">
-            <input type="text" placeholder="Buscar" value="" name="s">
-            <button></button>
 
-        </form></div>    </div>
     <div class="Header-contentNav">
-        <div>
 
-            <ul class="Header-contentNavLanguages">
-                <li><a href="http://micsur.org/">ES</a></li>
-                <li><a href="http://micsur.org/pt/">PT</a></li>
-                <li><a href="http://micsur.org/en/">EN</a></li>
-            </ul>
-        </div>
         <figure class="Header-contentNavLogo">
-            <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png" alt="Logo Micsur Bogotá">
+            <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png"
+                 alt="Logo Micsur Bogotá">
         </figure>
         <ul class="Header-nav">
-            <li><a href="http://micsur.org/" class="current">INICIO</a></li>
-            <li><a href="http://micsur.org/acerca/" class="">QUÉ ES MICSUR</a></li>
-            <li><a href="http://micsur.org/noticias/" class="
-                                ">NOTICIAS</a></li>
-            <li><a href="http://micsur.org/programacion/" class="">PROGRAMACIÓN</a>
-            </li>
-            <li><a href="#" class="">ACREDITACIONES</a>
-            </li>
-            <li><a href="http://micsur.org/galeria/" class="">GALERÍA</a>
-            </li>
-            <li><a href="http://micsur.org/datos-utiles/" class="">Datos útiles</a>
-            </li>
+
+            @if(Route::is('login'))
+                <li><a href="{{route('home')}}" class="current">REGISTRATE</a></li>
+            @else
+                <li><a href="{{route('login')}}" class="current">INICIO DE SESIÓN</a></li>
+            @endif
+
+
+            <li><a href="http://micsur.org/" class="">MICSUR</a></li>
+            <li><a href="http://micsur.org/noticias/" class="">NOTICIAS</a></li>
             <li><a href="http://micsur.org/contacto/" class="">CONTACTO</a></li>
         </ul>
     </div>
     <figure class="Header-map">
-        <img class="Header-micsurColor" src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur-color.png" alt="">
+        <img class="Header-micsurColor"
+             src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur-color.png" alt="">
     </figure>{{--
     <div class="Header-right">
         <span>17al20</span>OCTUBRE
