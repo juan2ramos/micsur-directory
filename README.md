@@ -1,1 +1,1 @@
-# micsur-directory
+# micsur directory
