@@ -1,51 +1,29 @@
-@extends('layout')
+@extends('layout.front')
 
-@section('content')
-    <header class="HeaderAuth">
-        <div class="HeaderAuth-content row middle ">
-            <figure class="col-8 ">
-                <a href="/"><img src="{{ url('images/logo-agrosellers.svg') }}" alt=""></a>
-            </figure>
-            <a class="col-2 end" href="{{route('login')}}">
-                <button class="Button">INICIAR SESIÓN</button>
-            </a>
-            <a class="col-2 end" href="{{route('register')}}">
-                <button class="Button">REGISTRATE</button>
-            </a>
-        </div>
-    </header>
-    @if (count($errors) > 0)
-        <div class="alert alert-danger">
+    <form class="row Form-register" role="form" method="POST" action="/password/reset">
+        <h1 class="col-8 small-12  bottom-element">
+            DIRECTORIO
+            <b>RESTAURAR CONTRASEÑA</b>
+        </h1>
+        <div class="col-8 offset-4 offset-small-0 small-12">
 
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
-    <form class="row center middle FormAuth Forms Login" role="form" method="POST" action="/password/reset">
-        <div class="BackContainer FormAuth-container">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="hidden" name="token" value="{{ $token }}">
-            <h2>TU NUEVA CONTRASEÑA</h2>
-
-            <label for="email">
-                <input type="email" name="email" value="{{ old('email') }}">
-                <span>E-mail</span>
+            <label for="email" class="row middle">
+                {!!  $errors->first('email', '<p class="error">:message</p>')  !!}
+                <span class="col-5">email:</span>
+                <input class="col-7" id="email" type="email" name="email" value="{{ old('email') }}">
             </label>
-            <label for="password">
-                <input type="password" name="password" id="password">
-                <span>Contraseña</span>
+            <label for="password" class="row middle">
+                {!!  $errors->first('password', '<p class="error">:message</p>')  !!}
+                <span class="col-5">Contraseña:</span>
+                <input class="col-7" name="password" id="password" type="password">
             </label>
-            <label for="password_confirmation">
-                <input type="password" id="password_confirmation" name="password_confirmation">
-                <span>Confirmar Contraseña</span>
+            <label for="password_confirmation" class="row middle">
+                <span class="col-5">Confirmar contraseña:</span>
+                <input class="col-7" name="password_confirmation" id="password_confirmation" type="password">
             </label>
-
-
-            <button type="submit" class="Button submit"> RESTAURAR</button>
+            <div class="row col-12 end ">
+                <button>RESTAURAR</button>
+            </div>
         </div>
     </form>
 

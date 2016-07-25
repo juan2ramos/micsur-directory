@@ -1,32 +1,24 @@
-@extends('layout')
+@extends('layout.front')
 
 @section('content')
-    <header class="HeaderAuth">
-        <div class="HeaderAuth-content row middle ">
-            <figure class="col-8 ">
-                <a href="/"><img src="{{ url('images/logo-agrosellers.svg') }}" alt=""></a>
-            </figure>
-            <a class="col-2 end" href="{{route('login')}}">
-                <button class="Button">INICIAR SESIÓN</button>
-            </a>
-            <a class="col-2 end" href="{{route('register')}}">
-                <button class="Button">REGISTRATE</button>
-            </a>
-        </div>
-    </header>
 
-    <form class="row center middle FormAuth Forms Login" role="form" method="POST" action="/password/email"">
-        <div class="BackContainer FormAuth-container">
+    <form class="row Form-register" role="form" method="POST" action="/password/email">
+        <h1 class="col-8 small-12  bottom-element">
+            DIRECTORIO
+            <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>
+        </h1>
+        <div class="col-8 offset-4 offset-small-0 small-12">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <h2>RESTAURAR PASSWORD</h2>
+            <label for="email" class="row middle">
 
-            <label for="email">
-                <input type="email" name="email" value="{{ old('email') }}">
-                <span>E-mail</span>
+                {!!  $errors->first('email', '<p class="error">:message</p>')  !!}
+                <span class="col-5">email:</span>
+                <input class="col-7" id="email" type="email" name="email" value="{{ old('email') }}">
+
             </label>
-
-
-            <button  type="submit" class="Button submit"> RESTAURAR</button>
+            <div class="row col-12 end ">
+                <button>RESTAURAR</button>
+            </div>
         </div>
     </form>
 
