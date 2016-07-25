@@ -158,6 +158,7 @@ return [
         Directory\Providers\EventServiceProvider::class,
         Directory\Providers\RouteServiceProvider::class,
         'Webpatser\Countries\CountriesServiceProvider',
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -204,6 +205,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Countries' => 'Webpatser\Countries\CountriesFacade',
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

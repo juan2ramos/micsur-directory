@@ -54,7 +54,9 @@
                 <span class="col-5">País:</span>
                 <select class="col-7" name="country" id="sector">
                     <option value="">Selecciona el país</option>
-                    <option value="" {{(old('country')=='')?'selected':''}}></option>
+                    @foreach($countries as $country)
+                        <option value={{ $country->id }} {{(old('country')== $country->id )?'selected':''}}>{{ $country->name }}</option>
+                    @endforeach
                 </select>
             </label>
             <label for="address" class="row middle">
@@ -68,7 +70,7 @@
                 <input class="col-7" name="company" value="{{ old('company') }}" id="company" type="text">
             </label>
             <label for="sector" class="row middle">
-                {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
+                {!!  $errors->first('sector', '<p class="error">:message</p>')  !!}
                 <span class="col-5">Sector:</span>
                 <select class="col-7" name="sector" id="sector">
                     <option value="">Selecciona el sector</option>
@@ -88,7 +90,8 @@
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
                 <span class="col-5  top-element">Actividad <em> (120 caracteres)</em>:</span>
-                <textarea maxlength="120" class="col-7" name="activities" id="activities">{{ old('activities') }} </textarea>
+                <textarea maxlength="120" class="col-7" name="activities"
+                          id="activities">{{ old('activities') }}</textarea>
             </label>
             <label for="website" class="row middle">
                 <span class="col-5">Sitio web:</span>

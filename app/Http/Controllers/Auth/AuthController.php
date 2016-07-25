@@ -60,9 +60,11 @@ class AuthController extends Controller
             'image-profile' => 'mimes:jpeg,jpg,png,gif|required|max:20000',
 
             'company' => 'required|max:255',
+            'country' => 'required|max:255',
             'activities' => 'required|max:255',
-            'what-i-do' => 'required|max:255',
+            'address' => 'required|max:255',
             'mobile' => 'required|max:255',
+            'sector' => 'required|max:255',
         ],
             [
                 'name.required' => 'El nombre es obligatorio',
@@ -77,6 +79,9 @@ class AuthController extends Controller
                 'image-profile.required' => 'La imagen es obligatoria',
                 'image-profile.max' => 'La imagen no debe ser mayor a 2M',
 
+                'sector.required' => 'El campo sector es obligatorio',
+                'country.required' => 'El campo país es obligatorio',
+                'address.required' => 'El Dirección es obligatorio',
                 'company.required' => 'La empresa es obligatorio',
                 'activities.required' => 'La actividad es obligatorio',
                 'what-i-do.required' => 'A que me dedico:    es obligatorio',
@@ -94,6 +99,7 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+
         return User::create([
             'name' => $data['name'],
             'last-name' => $data['last-name'],
@@ -112,7 +118,9 @@ class AuthController extends Controller
 
     public function postRegister(Request $request)
     {
+
         $validator = $this->validator($request->all());
+
         if ($validator->fails()) {
             $this->throwValidationException(
                 $request, $validator
@@ -134,6 +142,7 @@ class AuthController extends Controller
         return redirect($this->redirectPath());
     }
     private function createClient($request,$user){
+
         $data = $request->all();
         if ($request->hasFile('image-profile')) {
             $imageName = str_random(40) . '**' . $request->file('image-profile')->getClientOriginalName();

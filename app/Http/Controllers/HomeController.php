@@ -2,6 +2,7 @@
 
 namespace Directory\Http\Controllers;
 
+use Directory\Entities\Country;
 use Illuminate\Http\Request;
 
 use Directory\Http\Requests;
@@ -15,6 +16,7 @@ class HomeController extends Controller
     }
 
     function index(){
-        return view('front.register');
+        $countries = Country::all();
+        return view('front.register', compact('countries'));
     }
 }
