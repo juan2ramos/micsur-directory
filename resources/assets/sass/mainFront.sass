@@ -21,6 +21,22 @@ body
   font-size: rem(18)
   color: $gray
   padding: 0 rem(20)
+  .result
+    position: absolute
+    top: 0
+    left: 0
+    max-height: 100%
+    overflow: scroll
+  figure
+    font-size: rem(12)
+    text-align: center
+    .error
+      position: absolute
+      right: 0
+      color: red
+      font-size: rem(15)
+      top: rem(-22)
+      margin: 0
   button
     padding: rem(10) rem(50)
     background: #67b9e5
@@ -60,6 +76,7 @@ body
     b
       display: block
       font-weight: bold
+
 #image-profile
   min-height: 100%
   width: 100%
@@ -70,6 +87,7 @@ body
   height: rem(180)
   max-width: rem(180)
   cursor: pointer
+  position: relative
 .Form-contentImageUser
   margin-top: rem(15)
   @include respond-to(medium)
