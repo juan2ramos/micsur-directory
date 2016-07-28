@@ -1,4 +1,4 @@
-@extends('partials.emails')
+@extends('layout.front')
 
 @section('emailButtonMessage')
     <tr>
