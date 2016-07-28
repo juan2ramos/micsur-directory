@@ -22,7 +22,7 @@
                 <input class="col-7" id="password" type="password" name="password">
             </label>
             <div class="row end">
-                <a style="color: #67b9e5; font-size: 14px" class="login-restartPassword" href="/password/email">
+                <a style="color: #67b9e5; font-size: 14px" class="login-restartPassword" href="{{route('getEmail')}}">
                     Olvido su contraseña?
                 </a>
             </div>
