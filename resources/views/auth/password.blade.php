@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <form class="row Form-register" role="form" method="POST" action="/password/email">
+    <form class="row Form-register" role="form" method="POST" action="{{route('postEmail')}}">
         <h1 class="col-8 small-12  bottom-element">
             DIRECTORIO
             <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>

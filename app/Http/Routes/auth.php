@@ -22,9 +22,9 @@ Route::post('registro', [
     ]
 );
 // Password reset link request routes...
-Route::get('password/email', 'Auth\PasswordController@getEmail');
-Route::post('password/email', 'Auth\PasswordController@postEmail');
+Route::get('password/email', ['uses'=>'Auth\PasswordController@getEmail','as'=>'getEmail']);
+Route::post('password/email', ['uses'=>'Auth\PasswordController@postEmail','as'=>'postEmail']);
 
 // Password reset routes...
-Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
-Route::post('password/reset', 'Auth\PasswordController@postReset');
+Route::get('password/reset/{token}', ['uses'=>'Auth\PasswordController@getReset','as'=>'getReset']);
+Route::post('password/reset', ['uses'=>'Auth\PasswordController@postReset','as'=>'postReset']);

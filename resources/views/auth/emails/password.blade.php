@@ -6,7 +6,7 @@
             <table cellpadding="0" cellspacing="0" style="border:none;border-radius:3px;" align="center">
                 <tbody>
                 <tr>
-                    <td style="background:#C5D257;border-radius:3px;color:#253A1B;cursor:auto;" align="center" valign="middle" bgcolor="#C5D257"><a class="mj-content" href="{{ url('password/reset/'.$token) }}" style="display:inline-block;text-decoration:none;background:#C5D257;border:1px solid #C5D257;border-radius:3px;color:#253A1B;font-family:trebuchet MS;font-size:13px;font-weight:bold;padding:20px 50px ;" target="_blank">
+                    <td style="background:#C5D257;border-radius:3px;color:#253A1B;cursor:auto;" align="center" valign="middle" bgcolor="#C5D257"><a class="mj-content" href="{{ route('getReset', ['token' => $token])  }}" style="display:inline-block;text-decoration:none;background:#C5D257;border:1px solid #C5D257;border-radius:3px;color:#253A1B;font-family:trebuchet MS;font-size:13px;font-weight:bold;padding:20px 50px ;" target="_blank">
                             !CAMBIAR CONTRASEÑA!
                         </a>
                     </td>
