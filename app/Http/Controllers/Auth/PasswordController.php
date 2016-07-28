@@ -28,5 +28,6 @@ class PasswordController extends Controller
     public function __construct()
     {
         $this->middleware($this->guestMiddleware());
+        $this->subject = 'Reiniciar contraseña directorio Micsur'; //  < --JUST ADD THIS LIN
     }
 }

@@ -126,4 +126,6 @@
 @endsection
 @section('scripts')
     <script src="{{asset('js/images.js')}}"></script>
+    <script src="{{asset('js/form.js')}}"></script>
 @endsection
+'\''.''micsur@micsur.com'.'\''
