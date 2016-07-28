@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'info@micsur.org', 'name' => 'Micsur'],
+    'from' => ['address' => null, 'name' => null],
 
     /*
     |--------------------------------------------------------------------------
