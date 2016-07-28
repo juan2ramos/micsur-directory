@@ -98,7 +98,9 @@
                 <input class="col-7" name="website" id="website" value="{{ old('website') }}" type="text">
             </label>
             <label for="mobile" class="row middle">
-                {!!  $errors->first('mobile', '<p class="error">:message</p>')  !!}
+                @if($errors->has('mobile') || $errors->has('mobile-1'))
+                    <p class="error">El Teléfono móvil es obligatorio</p>
+                @endif
                 <span class="col-5 small-12">Teléfono móvil:</span>
                 <input class="col-1 small-2" value="{{ old('mobile') }}" maxlength="3" name="mobile" id="mobile"
                        type="text">
@@ -128,4 +130,3 @@
     <script src="{{asset('js/images.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
 @endsection
-'\''.''micsur@micsur.com'.'\''

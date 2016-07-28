@@ -64,6 +64,7 @@ class AuthController extends Controller
             'activities' => 'required|max:255',
             'address' => 'required|max:255',
             'mobile' => 'required|max:255',
+            'mobile-1' => 'required|max:255',
             'sector' => 'required|max:255',
         ],
             [
@@ -86,6 +87,7 @@ class AuthController extends Controller
                 'activities.required' => 'La actividad es obligatorio',
                 'what-i-do.required' => 'A que me dedico:    es obligatorio',
                 'mobile.required' => 'El Teléfono móvil: es obligatorio',
+                'mobile-1.required' => 'El Teléfono móvil: es obligatorio',
             ]
 
         );
