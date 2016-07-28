@@ -1,5 +1,5 @@
 @extends('layout.front')
-
+@section('content')
     <form class="row Form-register" role="form" method="POST" action="{{route('postReset')}}">
         <h1 class="col-8 small-12  bottom-element">
             DIRECTORIO
