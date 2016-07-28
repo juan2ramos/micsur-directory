@@ -6,7 +6,9 @@
             <b>RESTAURAR CONTRASEÑA</b>
         </h1>
         <div class="col-8 offset-4 offset-small-0 small-12">
+            {!! csrf_field() !!}
 
+            <input type="hidden" name="token" value="{{ $token }}">
             <label for="email" class="row middle">
                 {!!  $errors->first('email', '<p class="error">:message</p>')  !!}
                 <span class="col-5">email:</span>
