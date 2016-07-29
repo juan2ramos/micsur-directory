@@ -747,6 +747,35 @@ main {
     padding-bottom: .2rem;
     margin: 4rem 0 2rem; }
 
+.ErrorsAlert {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.6); }
+
+.ErrorsAlert-content {
+  border: 0.25rem solid white;
+  background: #ff696d;
+  color: white;
+  padding: 0.625rem 2.875rem;
+  position: relative;
+  font-size: 1.125rem; }
+  .ErrorsAlert-content span {
+    position: absolute;
+    right: -1rem;
+    top: -1.0625rem;
+    border: 0.125rem solid white;
+    background: #ff696d;
+    padding: 0.875rem 0.5625rem;
+    font-size: 1.125rem;
+    border-radius: 50%;
+    line-height: 0;
+    font-weight: 300;
+    cursor: pointer; }
+
 main {
   max-width: 80rem;
   margin: 2rem auto;

@@ -8,6 +8,36 @@ $widthContent: 80rem
 $orange : #C75809
 $yellow  : #F1D100
 $gray : rgb(109, 110, 113)
+
+
+.ErrorsAlert
+  position: fixed
+  z-index: 100
+  width: 100vw
+  height: 100vh
+  top: 0
+  left: 0
+  background: rgba(255, 255, 255, 0.6)
+.ErrorsAlert-content
+  border: 0.25rem solid white
+  background: #ff696d
+  color: white
+  padding: rem(10) rem(46)
+  position: relative
+  font-size: rem(18)
+  span
+    position: absolute
+    right: rem(-16)
+    top: rem(-17)
+    border: 0.125rem solid white
+    background: #ff696d
+    padding: rem(14) rem(9)
+    font-size: rem(18)
+    border-radius: 50%
+    line-height: 0
+    font-weight: 300
+    cursor: pointer
+
 main
   max-width: $widthContent
   margin: 2rem auto

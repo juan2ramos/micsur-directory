@@ -125,6 +125,14 @@
             <button>REGISTRAR...</button>
         </div>
     </form>
+    @if ( $errors->count() > 0 )
+        <section class=" row center middle ErrorsAlert">
+            <div class="ErrorsAlert-content">
+                <span>X</span>
+                <p>Tienes errores en algunos de los campos.</p>
+            </div>
+        </section>
+    @endif
 @endsection
 @section('scripts')
     <script src="{{asset('js/images.js')}}"></script>
