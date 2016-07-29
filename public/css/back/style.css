@@ -53,7 +53,7 @@ main {
     margin: 0 .15rem;
     border-radius: .25rem;
     color: white;
-    background: #C5D257; }
+    background: #f6cd07; }
   .pagination span {
     font-size: 1.3rem;
     font-weight: 400;
@@ -589,5 +589,58 @@ body {
   margin: 1.25rem 0;
   color: white;
   font-size: 0.875rem; }
+
+.Admin-h2 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #6d6e71; }
+  .Admin-h2 b {
+    font-weight: 400; }
+
+.Admin-table {
+  margin: auto;
+  width: 100%;
+  max-width: 50rem;
+  box-shadow: 0 0.1875rem 0.625rem #e3e3e3; }
+  .Admin-table thead {
+    background: #fdd200; }
+  .Admin-table th {
+    border-left: 0.0625rem solid #f6cd07; }
+    .Admin-table th:first-child {
+      border-left: none; }
+  .Admin-table th, .Admin-table td {
+    padding: 1rem 0.25rem;
+    text-align: center; }
+  .Admin-table tbody tr:nth-child(even) {
+    background: #fffbe8; }
+  .Admin-table svg {
+    max-width: 1.5625rem; }
+    .Admin-table svg:hover g {
+      fill: #be9e0b; }
+  .Admin-table .loader {
+    max-width: 1.875rem;
+    display: none; }
+
+.Admin-payUpdate {
+  background: #f6cd07;
+  padding: 0.5rem 1rem 0.4375rem;
+  color: black;
+  font-weight: 500; }
+  .Admin-payUpdate:hover {
+    box-shadow: inset 0 -0.25rem 0 #e8c20c; }
+
+.Search {
+  margin: 1.875rem auto 0.5rem;
+  max-width: 50rem;
+  position: relative; }
+  .Search input {
+    width: 18.75rem;
+    padding: 0.5rem 0.25rem; }
+  .Search button {
+    display: block;
+    position: absolute;
+    right: 0.1875rem;
+    top: 0.1875rem;
+    width: 1.875rem; }
 
 /*# sourceMappingURL=style.css.map */

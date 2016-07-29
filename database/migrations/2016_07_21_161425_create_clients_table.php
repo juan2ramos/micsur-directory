@@ -23,6 +23,7 @@ class CreateClientsTable extends Migration
             $table->string('mobile');
             $table->string('phone');
             $table->integer('validate');
+            $table->string('key_validate');
 
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
