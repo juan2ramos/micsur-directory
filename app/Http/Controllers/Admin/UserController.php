@@ -34,7 +34,7 @@ class UserController extends Controller
         ]);
         Mail::send('emails.registerPay', ['user' => $user], function ($m) use ($user) {
             $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
-            $m->bcc('coordinaciondirectorio@micsur.org ');
+            $m->bcc('juan2ramos@gmail.com');
             $m->to($user->email, $user->name)->subject('Tu pago ha sido registrado!');
 
         });
