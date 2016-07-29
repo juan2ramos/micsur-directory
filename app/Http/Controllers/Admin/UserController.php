@@ -27,7 +27,7 @@ class UserController extends Controller
         $client->save();
         $user = $client->user;
         Log::create([
-            'user_id' => Auth::user()->id,
+            'user_id' => auth()->user()->id,
             'action' => 'UserController@updatePayClient',
             'table' => 'client@validate',
             'data' => 'client.id: ' . $request->input('idUser')
