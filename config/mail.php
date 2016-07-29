@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'micsurmicsur.com', 'name' => 'Micsur'],
+    'from' => ['address' => '', 'name' => 'Micsur'],
 
     /*
     |--------------------------------------------------------------------------
