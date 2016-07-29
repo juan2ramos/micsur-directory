@@ -9,9 +9,9 @@ Route::group(['namespace' => 'Admin'], function () {
         'as' => 'clients'
     ]);
 
-    Route::post('payClient', [
-        'uses' => 'UserController@payClient',
-        'as' => 'payClient'
+    Route::post('updatePayClient', [
+        'uses' => 'UserController@updatePayClient',
+        'as' => 'updatePayClient'
     ]);
     Route::post('UserSearch', [
         'uses' => 'UserController@searchClient',
