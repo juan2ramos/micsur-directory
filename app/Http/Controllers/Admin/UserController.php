@@ -32,23 +32,24 @@ class UserController extends Controller
             'table' => 'client@validate',
             'data' => 'client.id: ' . $request->input('idUser')
         ]);
-       /* Mail::send('emails.registerPay', ['user' => $user], function ($m) use ($user) {
-            $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
-            $m->bcc('juan2ramos@gmail.com');
-            $m->to($user->email, $user->name)->subject('Tu pago ha sido registrado!');
+        /* Mail::send('emails.registerPay', ['user' => $user], function ($m) use ($user) {
+             $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
+             $m->bcc('juan2ramos@gmail.com');
+             $m->to($user->email, $user->name)->subject('Tu pago ha sido registrado!');
 
-        });*/
+         });*/
         return ['success' => 1];
     }
 
     function searchClient(Request $request)
     {
         $term = $request->input('search');
-        $clients = Client::whereHas('user', function ($query) use ($term) {
-            $query->whereRaw('email like "%' . $term . '%" or name like "%' . $term . '%"');
-        })->with(['user'=>function($q) use ($term){
-            $q->whereRaw('email like "%' . $term . '%" or name like "%' . $term . '%"');
-        }])->paginate(20);
+
+        $clients = Client::whereHas('user', function ($q) use ($term) {
+            $q->where('name', 'like', '%' .$term . '%')
+            ->orWhere('email', 'like', '%' .$term . '%');
+        })->paginate(20);
+
         return view('admin.users', compact('clients'));
     }
 }
