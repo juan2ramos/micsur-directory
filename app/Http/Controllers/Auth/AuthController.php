@@ -136,12 +136,12 @@ class AuthController extends Controller
            $this->createClient($request,$user);
 
 
-        /*Mail::send('emails.welcome', ['user' => $user], function ($m) use ($user) {
-            $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
+        Mail::send('emails.welcome', ['user' => $user], function ($m) use ($user) {
+            $m->from('coordinaciondirectorio@micsur.org', 'Directorio Micsur');
             $m->bcc('juan2ramos@gmail.com');
             $m->to($user->email, $user->name)->subject('Bienvenido!');
 
-        });*/
+        });
 
         Auth::loginUsingId($user->id);
         return redirect($this->redirectPath());

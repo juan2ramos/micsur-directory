@@ -89,8 +89,8 @@
             </label>
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
-                <span class="col-5  top-element">Actividad <em> (120 caracteres)</em>:</span>
-                <textarea maxlength="120" class="col-7" name="activities"
+                <span class="col-5   top-element">Actividad <em id="caracter"> (400 caracteres)</em>:</span>
+                <textarea maxlength="400" class="col-7" name="activities"
                           id="activities">{{ old('activities') }}</textarea>
             </label>
             <label for="website" class="row middle">
@@ -121,9 +121,17 @@
                 </div>
             </label>
         </div>
+        <div class="row">
+            <p class="col-8 offset-4 " style="text-align: justify;font-size: 15px">Le informamos que de acuerdo a nuestra Política de Privacidad. Toda la información acá consignada es
+                propiedad de MICSUR y no tendrá fines de uso externos.
+
+                Si tiene dudas por favor comuníquese con: <a style="color: #e85125" href="mailto:info@micsur.org">info@micsur.org</a> o <a style="color: #e85125"  href="mailto:ecultural@mincultura.gov.co">ecultural@mincultura.gov.co</a></p>
+        </div>
+
         <div class="row col-12 end ">
             <button>REGISTRAR...</button>
         </div>
+
     </form>
     @if ( $errors->count() > 0 )
         <section class=" row center middle ErrorsAlert">

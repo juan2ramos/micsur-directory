@@ -32,12 +32,12 @@ class UserController extends Controller
             'table' => 'client@validate',
             'data' => 'client.id: ' . $request->input('idUser')
         ]);
-        /* Mail::send('emails.registerPay', ['user' => $user], function ($m) use ($user) {
+        Mail::send('emails.registerPay', ['user' => $user], function ($m) use ($user) {
              $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
              $m->bcc('juan2ramos@gmail.com');
              $m->to($user->email, $user->name)->subject('Tu pago ha sido registrado!');
 
-         });*/
+         });
         return ['success' => 1];
     }
 
