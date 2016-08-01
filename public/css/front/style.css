@@ -788,7 +788,7 @@ body {
 .Form-register {
   max-width: 50rem;
   margin: 1rem auto;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: #6d6e71;
   padding: 0 1.25rem; }
   .Form-register .result {

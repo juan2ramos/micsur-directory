@@ -23,40 +23,41 @@
 
         </div>
         <div class="col-8 offset-4 offset-small-0 small-12">
+            <p>Los campos con (*) son obligatorios</p>
             <hr class="Form-hr">
             <label for="name" class="row middle">
                 {!!  $errors->first('name', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Nombre:</span>
+                <span class="col-5">Nombre(*):</span>
                 <input class="col-7" name="name" id="name" value="{{ old('name') }}" type="text">
             </label>
             <label for="last-name" class="row middle">
                 {!!  $errors->first('last-name', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Apellido:</span>
+                <span class="col-5">Apellido(*):</span>
                 <input class="col-7" name="last-name" value="{{ old('last-name') }}" id="last-name" type="text">
             </label>
             <label for="identification-number" class="row middle">
                 {!!  $errors->first('identification-number', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Número de identificación:</span>
+                <span class="col-5">Número de identificación(*):</span>
                 <input class="col-7" name="identification-number" value="{{ old('identification-number') }}"
                        id="identification-number" type="text">
             </label>
             <label for="email" class="row middle">
                 {!!  $errors->first('email', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Email:</span>
+                <span class="col-5">Email(*):</span>
                 <input class="col-7" name="email" value="{{ old('email') }}" id="email" type="email">
             </label>
             <label for="password" class="row middle">
                 {!!  $errors->first('password', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Contraseña:</span>
+                <span class="col-5">Contraseña(*):</span>
                 <input class="col-7" name="password" id="password" type="password">
             </label>
             <label for="password_confirmation" class="row middle">
-                <span class="col-5">Confirmar contraseña:</span>
+                <span class="col-5">Confirmar contraseña(*):</span>
                 <input class="col-7" name="password_confirmation" id="password_confirmation" type="password">
             </label>
             <label for="country" class="row middle">
                 {!!  $errors->first('country', '<p class="error">:message</p>')  !!}
-                <span class="col-5">País:</span>
+                <span class="col-5">País(*):</span>
                 <select class="col-7" name="country" id="country">
                     <option value="">Selecciona el país</option>
                     @foreach($countries as $country)
@@ -66,17 +67,17 @@
             </label>
             <label for="address" class="row middle">
                 {!!  $errors->first('address', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Dirección:</span>
+                <span class="col-5">Dirección(*):</span>
                 <input class="col-7" name="address" value="{{ old('address') }}" id="address" type="text">
             </label>
             <label for="company" class="row middle">
                 {!!  $errors->first('company', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Empresa:</span>
+                <span class="col-5">Empresa(*):</span>
                 <input class="col-7" name="company" value="{{ old('company') }}" id="company" type="text">
             </label>
             <label for="sector" class="row middle">
                 {!!  $errors->first('sector', '<p class="error">:message</p>')  !!}
-                <span class="col-5">Sector:</span>
+                <span class="col-5">Sector(*):</span>
                 <select class="col-7" name="sector" id="sector">
                     <option value="">Selecciona el sector</option>
                     <option value="audiovisual" {{(old('sector')=='audiovisual')?'selected':''}}>Audiovisual
@@ -97,7 +98,7 @@
             </label>
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
-                <span class="col-5   top-element">Actividad <em id="caracter"> (400 caracteres)</em>:</span>
+                <span class="col-5   top-element">Actividad <em id="caracter"> (400 caracteres)</em>(*):</span>
                 <textarea maxlength="400" class="col-7" name="activities"
                           id="activities">{{ old('activities') }}</textarea>
             </label>
@@ -107,9 +108,9 @@
             </label>
             <label for="mobile" class="row middle">
                 @if($errors->has('mobile') || $errors->has('mobile-1'))
-                    <p class="error">El Teléfono móvil es obligatorio</p>
+                    <p class="error">El Teléfono móvil es obligatorio(*)</p>
                 @endif
-                <span class="col-5 small-12">Teléfono móvil:</span>
+                <span class="col-5 small-12">Teléfono móvil(*):</span>
                 <input class="col-1 small-2" value="{{ old('mobile') }}" maxlength="3" name="mobile" id="mobile"
                        type="text">
                 <div class="col-6 small-10" style="padding-left: 5px">
