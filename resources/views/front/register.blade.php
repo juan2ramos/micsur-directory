@@ -3,10 +3,15 @@
 @section('content')
     <form action="{{ route('register') }}" enctype="multipart/form-data" method="post" class="row Form-register">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <h1 class="col-8 small-12  bottom-element">
-            DIRECTORIO
-            <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>
-        </h1>
+        <div class="col-8 small-12  bottom-element">
+            <h1 >
+                DIRECTORIO
+                <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>
+            </h1>
+            <p style="    text-align: justify; font-size: 14px;max-width: 100%;">Las inscripciones de industria permiten a quienes deseen asistir al mercado el ingreso  MICSUR 2016, y el acceso al directorio de industria. Este directorio, que se abrirá el 3 de octubre, permitirá tener la información de todos los inscritos al mercado, showcases, rueda de negocios y actividades académicas, con el fin de que aquellos que no participan en la rueda de negocios tengan la oportunidad de contactar a los inscritos al mercado, organizar citas y participar de todas las atividades al interior del pabellón MICSUR.</p>
+        </div>
+
+
         <div class="col-4 small-12 row Form-contentImageUser between">
             <div class="col-3 small-12 ">Imagen:</div>
             <figure class="col-9 small-12 Form-figure-user ">
@@ -52,7 +57,7 @@
             <label for="country" class="row middle">
                 {!!  $errors->first('country', '<p class="error">:message</p>')  !!}
                 <span class="col-5">País:</span>
-                <select class="col-7" name="country" id="sector">
+                <select class="col-7" name="country" id="country">
                     <option value="">Selecciona el país</option>
                     @foreach($countries as $country)
                         <option value={{ $country->id }} {{(old('country')== $country->id )?'selected':''}}>{{ $country->name }}</option>
@@ -85,6 +90,9 @@
                     <option value="artes_escenicas" {{(old('sector')=='artes_escenicas')?'selected':''}}>Artes
                         escénicas
                     </option>
+                    <option value="privada" {{(old('sector')=='privada')?'selected':''}}>Organización privada</option>
+                    <option value="publica" {{(old('sector')=='publica')?'selected':''}}>Organización pública</option>
+
                 </select>
             </label>
             <label for="activities" class="row middle">
