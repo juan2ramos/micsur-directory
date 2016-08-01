@@ -62,7 +62,7 @@ class AuthController extends Controller
 
             'company' => 'required|max:255',
             'country' => 'required|max:255',
-            'activities' => 'required|max:255',
+            'activities' => 'required|max:401',
             'address' => 'required|max:255',
             'mobile' => 'required|max:255',
             'mobile-1' => 'required|max:255',
