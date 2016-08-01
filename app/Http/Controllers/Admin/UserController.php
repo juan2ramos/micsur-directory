@@ -36,7 +36,7 @@ class UserController extends Controller
              $m->from('coordinaciondirectorio@micsur.org ', 'Directorio Micsur');
              $m->bcc('coordinaciondirectorio@micsur.org');
              $m->to($user->email, $user->name)->subject('Tu pago ha sido registrado!');
-
+    
          });
         return ['success' => 1];
     }

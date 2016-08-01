@@ -122,10 +122,10 @@
             </label>
         </div>
         <div class="row">
-            <p class="col-8 offset-4 " style="text-align: justify;font-size: 15px">Le informamos que de acuerdo a nuestra Política de Privacidad. Toda la información acá consignada es
+            <p class="col-8 offset-4 " style="text-align: justify;font-size: 15px;max-width:100%">Le informamos que de acuerdo a nuestra Política de Privacidad. Toda la información acá consignada es
                 propiedad de MICSUR y no tendrá fines de uso externos.
 
-                Si tiene dudas por favor comuníquese con: <a style="color: #e85125" href="mailto:info@micsur.org">info@micsur.org</a> o <a style="color: #e85125"  href="mailto:ecultural@mincultura.gov.co">ecultural@mincultura.gov.co</a></p>
+                Si tiene dudas por favor comuníquese con: <a style="color: #e85125" href="mailto:coordinaciondirectorio@micsur.org">coordinaciondirectorio@micsur.org</a> o <a style="color: #e85125"  href="mailto:ecultural@mincultura.gov.co">ecultural@mincultura.gov.co</a></p>
         </div>
 
         <div class="row col-12 end ">
