@@ -101,7 +101,7 @@
                     @foreach($sectors as $id => $sector)
                         <option value="{{$id}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
                     @endforeach
-                </select>$sector
+                </select>
             </label>
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
