@@ -66,7 +66,7 @@ class AuthController extends Controller
             'address' => 'required|max:255',
             'mobile' => 'required|max:255',
             'mobile-1' => 'required|max:255',
-            'sector' => 'required|max:255',
+            'sector' => 'required',
         ],
             [
                 'name.required' => 'El nombre es obligatorio',
@@ -97,12 +97,18 @@ class AuthController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array $data
+     * @param $request
      * @return User
+     * @internal param array $data
      */
-    protected function create(array $data)
+    protected function create($request)
     {
-
+        $data = $request->all();
+        if ($request->hasFile('image-profile')) {
+            $imageName = str_random(40) . '**' . $request->file('image-profile')->getClientOriginalName();
+            $request->file('image-profile')->move(base_path() . '/public/uploads/profiles/', $imageName);
+            $data['image-profile'] = $imageName;
+        }
         return User::create([
             'name' => $data['name'],
             'last-name' => $data['last-name'],
@@ -111,6 +117,7 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
             'password_2' => md5($data['password']),
             'role_id' => 2,
+            'image-profile' => $data['image-profile']
         ]);
     }
 
@@ -122,6 +129,7 @@ class AuthController extends Controller
     public function postRegister(Request $request)
     {
 
+
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
@@ -129,7 +137,7 @@ class AuthController extends Controller
                 $request, $validator
             );
         }
-        $user = $this->create($request->all());
+        $user = $this->create($request);
 
 
         if ($user->role_id == 2)
@@ -149,16 +157,14 @@ class AuthController extends Controller
     private function createClient($request,$user){
 
         $data = $request->all();
-        if ($request->hasFile('image-profile')) {
-            $imageName = str_random(40) . '**' . $request->file('image-profile')->getClientOriginalName();
-            $request->file('image-profile')->move(base_path() . '/public/uploads/profiles/', $imageName);
-            $data['image-profile'] = $imageName;
-        }
+
         $data['user_id'] = $user->id;
         $data['mobile'] = $data['mobile'].$data['mobile-1'];
         $data['phone'] = $data['phone'].$data['phone-1'].$data['phone-2'];
 
-        Client::create($data);
+
+        $client = Client::create($data);
+        $client->sectors()->attach($data['sector']);
 
     }
     public function redirectPath()

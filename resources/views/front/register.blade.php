@@ -1,18 +1,36 @@
 @extends('layout.front')
 
 @section('content')
-    <form action="{{ route('register') }}" enctype="multipart/form-data" method="post" class="row Form-register">
+    <form action="{{ route('register') }}" enctype="multipart/form-data" method="post"
+          class="row Form-register bottom-element">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <div class="col-8 small-12  bottom-element">
-            <h1 >
+        <div class="col-12 small-12  bottom-element">
+            <h1>
                 DIRECTORIO
                 <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>
             </h1>
-            <p style="    text-align: justify; font-size: 14px;max-width: 100%;">Las inscripciones de industria permiten a quienes deseen asistir al mercado el ingreso  MICSUR 2016, y el acceso al directorio de industria. Este directorio, que se abrirá el 3 de octubre, permitirá tener la información de todos los inscritos al mercado, showcases, rueda de negocios y actividades académicas, con el fin de que aquellos que no participan en la rueda de negocios tengan la oportunidad de contactar a los inscritos al mercado, organizar citas y participar de todas las atividades al interior del pabellón MICSUR.</p>
+            <p style="text-align: justify; font-size: 15px;max-width: 100%;">
+                Las inscripciones de industria están dirigidas a todos los empresarios y agentes del sector cultural a
+                nivel internacional, que deseen asistir a MICSUR 2016.
+                La inscripción permite estar acreditado para ingresar al pabellón Micsur (Gran Salón de Corferias en
+                Bogotá , Colombia, octubre 18 al 20 de 2016) y tener acceso al directorio de industria. Este directorio,
+                que se publicará en línea el 3 de octubre, permitirá tener la información de todos los inscritos al
+                mercado, showcases, rueda de negocios y actividades académicas, con el fin de que los asistentes tengan
+                la oportunidad de contactar a los inscritos al mercado, organizar citas y participar de todas las
+                actividades al interior del pabellón MICSUR.
+            </p>
+            <p style="text-align: justify; font-size: 15px;max-width: 100%;">
+                El valor de la inscripción es de 240.000.oo pesos colombianos o 80 dólares americanos. Una vez complete
+                y llene este formulario, se le direccionará a un sitio de pagos seguros en línea para pago con tarjeta
+                de crédito y medios electrónicos. Solo hasta completar el pago usted quedará inscrito en Micsur. Las
+                inscripciones que se hagan después del 10 de septiembre, no serán tenidas en cuenta para el libro
+                impreso de industria Micsur 2016. Quienes se inscriban entre el 10 de septiembre y el 1 de octubre
+                figurarán en el directorio online, al cual tendrán acceso mediante su correo y contraseña.
+            </p>
         </div>
 
 
-        <div class="col-4 small-12 row Form-contentImageUser between">
+        <div class="col-4 offset-8 small-12 row Form-contentImageUser between">
             <div class="col-3 small-12 ">Imagen:</div>
             <figure class="col-9 small-12 Form-figure-user ">
                 {!!  $errors->first('image-profile', '<p class="error">:message</p>')  !!}
@@ -78,23 +96,12 @@
             <label for="sector" class="row middle">
                 {!!  $errors->first('sector', '<p class="error">:message</p>')  !!}
                 <span class="col-5">Sector(*):</span>
-                <select class="col-7" name="sector" id="sector">
+                <select class="col-7" name="sector[]" id="sector" multiple="multiple">
                     <option value="">Selecciona el sector</option>
-                    <option value="audiovisual" {{(old('sector')=='audiovisual')?'selected':''}}>Audiovisual
-                    </option>
-                    <option value="diseno" {{(old('sector')=='diseno')?'selected':''}}>Diseño</option>
-                    <option value="musica" {{(old('sector')=='musica')?'selected':''}}>Música</option>
-                    <option value="editorial" {{(old('sector')=='editorial')?'selected':''}}>Editorial</option>
-                    <option value="animacion_videojuegos" {{(old('sector')=='animacion_videojuegos')?'selected':''}}>
-                        Animación y Videojuegos
-                    </option>
-                    <option value="artes_escenicas" {{(old('sector')=='artes_escenicas')?'selected':''}}>Artes
-                        escénicas
-                    </option>
-                    <option value="privada" {{(old('sector')=='privada')?'selected':''}}>Organización privada</option>
-                    <option value="publica" {{(old('sector')=='publica')?'selected':''}}>Organización pública</option>
-
-                </select>
+                    @foreach($sectors as $id => $sector)
+                        <option value="{{$id}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
+                    @endforeach
+                </select>$sector
             </label>
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
@@ -131,10 +138,14 @@
             </label>
         </div>
         <div class="row">
-            <p class="col-8 offset-4 " style="text-align: justify;font-size: 15px;max-width:100%">Le informamos que de acuerdo a nuestra Política de Privacidad. Toda la información acá consignada es
+            <p class="col-8 offset-4 " style="text-align: justify;font-size: 15px;max-width:100%">Le informamos que de
+                acuerdo a nuestra Política de Privacidad. Toda la información acá consignada es
                 propiedad de MICSUR y no tendrá fines de uso externos.
 
-                Si tiene dudas por favor comuníquese con: <a style="color: #e85125" href="mailto:coordinaciondirectorio@micsur.org">coordinaciondirectorio@micsur.org</a> o <a style="color: #e85125"  href="mailto:ecultural@mincultura.gov.co">ecultural@mincultura.gov.co</a></p>
+                Si tiene dudas por favor comuníquese con: <a style="color: #e85125"
+                                                             href="mailto:coordinaciondirectorio@micsur.org">coordinaciondirectorio@micsur
+                    .org</a> o <a style="color: #e85125" href="mailto:ecultural@mincultura.gov.co">ecultural@mincultura
+                    .gov.co</a></p>
         </div>
 
         <div class="row col-12 end ">
@@ -153,5 +164,15 @@
 @endsection
 @section('scripts')
     <script src="{{asset('js/images.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="{{asset('js/form.js')}}"></script>
+    <script type="text/javascript">
+        $('#sector').select2({
+            closeOnSelect: false
+        });
+
+    </script>
+@endsection
+@section('styles')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
 @endsection

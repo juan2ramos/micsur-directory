@@ -878,4 +878,8 @@ body {
   background: #6d6e71;
   margin: 1rem 0; }
 
+.select2-container--default .select2-selection--multiple, .select2-selection--multiple, .select2-selection--multiple {
+  border: 2px solid #6d6e71 !important;
+  border-radius: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */
