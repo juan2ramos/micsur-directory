@@ -660,14 +660,15 @@ main {
   vertical-align: middle;
   width: 100%;
   text-align: right;
-  margin: 1.5rem 0;
-  display: none; }
+  margin: 0 0 1.5rem; }
   @media (min-width: 36rem) {
     .Header-contentNavLogo {
       display: block; } }
+  .Header-contentNavLogo img {
+    margin: auto; }
 
 .Header-nav {
-  margin-bottom: 2rem; }
+  margin-bottom: 0.875rem; }
   .Header-nav a {
     color: #000;
     display: block;

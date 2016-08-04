@@ -89,7 +89,14 @@
 
 
     <div class="Header-contentNav">
+        <div>
 
+            <ul class="Header-contentNavLanguages">
+                <li><a href="{{ url('lang', ['es']) }}">ES</a></li>
+                <li><a href="{{ url('lang', ['pt']) }}">PT</a></li>
+                <li><a href="{{ url('lang', ['en']) }}/">EN</a></li>
+            </ul>
+        </div>
         <figure class="Header-contentNavLogo">
             <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png"
                  alt="Logo Micsur Bogotá">

@@ -6,8 +6,8 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="col-12 small-12  bottom-element">
             <h1>
-                DIRECTORIO
-                <b>INDUSTRIAS CREATIVAS Y CULTURALES</b>
+                {{trans('register.h1')}}
+                <b>{{trans('register.h1Span')}}</b>
             </h1>
             <p style="text-align: justify; font-size: 15px;max-width: 100%;">
                 Las inscripciones de industria están dirigidas a todos los empresarios y agentes del sector cultural a
@@ -98,10 +98,10 @@
                 <span class="col-5">Sector(*):</span>
                 <select class="col-7" name="sector[]" id="sector" multiple="multiple">
                     <option value="">Selecciona el sector</option>
-                    @foreach($sectors as $id => $sector)
-                        <option value="{{$id}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
+                    @foreach($sectors as $id $sector)
+                        <option value="{{$sector}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
                     @endforeach
-                </select>
+                </select>$sector
             </label>
             <label for="activities" class="row middle">
                 {!!  $errors->first('activities', '<p class="error">:message</p>')  !!}
