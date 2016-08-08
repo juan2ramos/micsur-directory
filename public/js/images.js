@@ -42,8 +42,9 @@ function uploadImage(file) {
         $output.html('');
         figure.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
             "title='" + picFile.name + "'/>";
-
-
+        if($('.Form-figure-user').hasClass('remove') ){
+            $('.Form-figure-user img').remove();
+        }
         $output.append(figure);
 
     });

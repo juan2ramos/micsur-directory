@@ -159,6 +159,8 @@ return [
         Directory\Providers\RouteServiceProvider::class,
         'Webpatser\Countries\CountriesServiceProvider',
         Barryvdh\Debugbar\ServiceProvider::class,
+        Collective\Bus\BusServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -206,6 +208,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Countries' => 'Webpatser\Countries\CountriesFacade',
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

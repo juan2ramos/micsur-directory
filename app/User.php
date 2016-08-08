@@ -25,7 +25,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    function client()
+    public function client()
     {
         return $this->hasOne(Client::class);
     }

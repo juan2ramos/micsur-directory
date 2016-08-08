@@ -36,9 +36,9 @@ class Kernel extends HttpKernel
         'api' => [
             'throttle:60,1',
         ],
-        'admin' =>[
-            'web',
+        'admin' => [
             'auth',
+            \Directory\Http\Middleware\admin::class,
         ],
     ];
 

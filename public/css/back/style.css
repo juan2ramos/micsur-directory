@@ -635,12 +635,77 @@ body {
   position: relative; }
   .Search input {
     width: 18.75rem;
-    padding: 0.5rem 0.25rem; }
+    padding: 0.5rem 0.25rem;
+    height: 2.5rem; }
   .Search button {
     display: block;
     position: absolute;
     right: 0.1875rem;
     top: 0.1875rem;
     width: 1.875rem; }
+
+.success {
+  text-align: center;
+  font-size: 1.2rem;
+  background: #dcffd2;
+  padding: 0.0625rem;
+  margin: 0.5rem 0;
+  color: #6d6e71; }
+
+.UserEdit {
+  margin: 1.5rem 0;
+  color: #6d6e71;
+  font-size: 1rem; }
+  .UserEdit label p {
+    margin: 0.25rem 0 0.5rem;
+    text-align: right;
+    width: 100%;
+    color: red;
+    font-size: 0.875rem; }
+    .UserEdit label p ~ input, .UserEdit label p ~ select, .UserEdit label p ~ textarea {
+      border: 0.125rem red solid; }
+  .UserEdit label {
+    padding: 0 1.25rem;
+    margin: 1rem auto; }
+  .UserEdit input, .UserEdit select, .UserEdit textarea {
+    border: 0.125rem #6d6e71 solid;
+    height: 2rem;
+    width: 100%;
+    padding: 0 0.25rem;
+    font-size: 0.875rem; }
+  .UserEdit textarea {
+    height: 9.375rem;
+    padding-top: 0.25rem; }
+  .UserEdit button {
+    padding: 0.625rem 3.125rem;
+    background: #67b9e5;
+    margin: 1.25rem 0;
+    color: white;
+    font-size: 0.875rem; }
+
+.back {
+  padding: 0.625rem 3.125rem;
+  background: #67b9e5;
+  margin: 1.25rem 0;
+  color: white;
+  font-size: 0.875rem; }
+
+.Form-figure-user {
+  margin: 1rem auto;
+  position: relative;
+  text-align: center; }
+  .Form-figure-user input {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0; }
+  .Form-figure-user .error {
+    color: red; }
+
+.select2-container--default .select2-selection--multiple, .select2-selection--multiple, .select2-selection--multiple {
+  border: 2px solid #6d6e71 !important;
+  border-radius: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

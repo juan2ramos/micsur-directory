@@ -98,8 +98,8 @@
                 <span class="col-5">Sector(*):</span>
                 <select class="col-7" name="sector[]" id="sector" multiple="multiple">
                     <option value="">Selecciona el sector</option>
-                    @foreach($sectors as $id $sector)
-                        <option value="{{$sector}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
+                    @foreach($sectors as $id => $sector)
+                        <option value="{{$id}}" {{(old('sector')==$sector)?'selected':''}}>{{$sector}}</option>
                     @endforeach
                 </select>$sector
             </label>
