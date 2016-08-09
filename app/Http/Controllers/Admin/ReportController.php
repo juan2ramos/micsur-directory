@@ -23,6 +23,10 @@ class ReportController extends Controller
 
             $excel->sheet('reporte', function ($sheet) use ($clients) {
                 $i = 2;
+                $sheet->setColumnFormat(array(
+                    'L' => '0',
+                    'M' => '0',
+                ));
                 $sheet->appendRow(1, [
                     'Nombre',
                     'Apellido',
