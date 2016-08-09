@@ -26,6 +26,7 @@ class ReportController extends Controller
                 $sheet->appendRow(1, [
                     'Nombre',
                     'Apellido',
+                    'Email',
                     'Número de identificación',
                     'País',
                     'Dirección',
@@ -50,6 +51,7 @@ class ReportController extends Controller
                     $sheet->appendRow($i, [
                         $client->user->name,
                         $client->user['last-name'],
+                        $client->user->email,
                         $client->user['identification-number'],
                         Country::find($client->country)->name,
                         $client->address,
