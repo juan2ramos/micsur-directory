@@ -17,14 +17,13 @@ class ReportController extends Controller
     {
 
         $date = Date::now()->format('l j F H:i:s');
-
         Excel::create('reporte' . $date, function ($excel) {
 
             $clients = Client::with('user', 'sectors')->get();
 
             $excel->sheet('reporte', function ($sheet) use ($clients) {
-                $i = 1;
-                $sheet->appendRow(0, [
+                $i = 2;
+                $sheet->appendRow(1, [
                     'Nombre',
                     'Apellido',
                     'Número de identificación',
@@ -61,7 +60,7 @@ class ReportController extends Controller
                         $client->website,
                         $mobile,
                         $phone,
-                        $client->user['image-profile'],
+                        Request::capture()->root().'/uploads/profiles/'.$client->user['image-profile'],
                     ]);
 
                     $i++;
