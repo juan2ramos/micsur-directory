@@ -94,7 +94,7 @@
             <ul class="Header-contentNavLanguages">
                 <li><a href="{{ url('lang', ['es']) }}">ES</a></li>
                 <li><a href="{{ url('lang', ['pt']) }}">PT</a></li>
-                <li><a href="{{ url('lang', ['en']) }}/">EN</a></li>
+                <li><a href="{{ url('lang', ['en']) }}">EN</a></li>
             </ul>
         </div>
         <figure class="Header-contentNavLogo">
