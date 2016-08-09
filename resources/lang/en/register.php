@@ -17,13 +17,7 @@ to arrange meetings with them and to participate of all the activities around th
 
 pavilion.',
 
-    'p2' => ' El valor de la inscripción es de 240.000.oo pesos colombianos o 80 dólares americanos. Una vez complete
-                y llene este formulario, se le direccionará a un sitio de pagos seguros en línea para pago con tarjeta
-                de crédito y medios electrónicos. Solo hasta completar el pago usted quedará inscrito en Micsur. Las
-                inscripciones que se hagan después del 10 de septiembre, no serán tenidas en cuenta para el libro
-                impreso de industria Micsur 2016. Quienes se inscriban entre el 10 de septiembre y el 1 de octubre
-                figurarán en el directorio online, al cual tendrán acceso mediante su correo y contraseña.
-                ',
+    'p2' => ' The registration payment fee is about 240.000 COP or 80 US dollars. Once you complete and fill this form, you will be addressed to a safe payment webside online for credit card payments and electronic payment means. Only  when your  payment will be confirmed you will be registered in MICSUR. All the registrations made forward September 10th, won´t be taken in count for the MICSUR industry printed book 2016. Those who make the registration from 10th of september to October 1st will appear on the online directory, those will have access through their Email and password. ',
     'img' => 'IMAGE:',
     'caption' => 'Click on or drag a picture',
     'p3' => 'The marked (*) blank spaces are mandatory.',
