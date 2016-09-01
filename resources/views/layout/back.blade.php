@@ -12,13 +12,17 @@
     @yield('styles')
 </head>
 <body>
-<header class="Header " >
+<header class="Header ">
     <div class="Header-content row middle between">
         <figure>
-            <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png" alt="Logo Micsur Bogotá">
+            <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png"
+                 alt="Logo Micsur Bogotá">
         </figure>
         <ul class="Nav-back row">
             <li><a href="http://micsur.org">Micsur</a></li>
+            @if(Auth::user()->role_id == 2)
+                <li><a href="{{route('profile')}}">Mi Perfil</a></li>
+            @endif
             <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
         </ul>
     </div>

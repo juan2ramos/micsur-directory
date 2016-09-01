@@ -16,6 +16,8 @@ Route::get('/', [
     ]
 );
 
+
+
 Route::get('lang/{lang}', function ($lang) {
     session(['lang' => $lang]);
     return Redirect::back();
