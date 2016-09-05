@@ -17,13 +17,12 @@
                     <p>¡El usuario se ha actualizado!</p>
                 </div>
             @endif
-            <form action="{{(Auth::user()->role_id == 2)?route('profilePost'):route('updateClient')}}" method="post" enctype="multipart/form-data"
-                  class="row UserEdit top">
+            <form method="post" enctype="multipart/form-data" class="row UserEdit top">
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <input type="hidden" name="user_id" value="{{ $client->user->id }}">
-                <div class="col-4 small-10  row between" style="margin: auto">
-                    <figure class="col-9 small-12 Form-figure-user remove">
+                <div class="col-4 small-12  row between" >
+                    <figure class="col-9 small-10 Form-figure-user remove">
                         <img src="{{asset('uploads/profiles/'. $client->user['image-profile'])}}" alt="">
                         {!!  $errors->first('image-profile', '<p class="error">:message</p>')  !!}
                         <output class="result"></output>
