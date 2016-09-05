@@ -17,7 +17,7 @@
                     <p>¡El usuario se ha actualizado!</p>
                 </div>
             @endif
-            <form action="{{(Auth::user()->role_id)?route('profilePost'):route('updateClient')}}" method="post" enctype="multipart/form-data"
+            <form action="{{(Auth::user()->role_id == 2)?route('profilePost'):route('updateClient')}}" method="post" enctype="multipart/form-data"
                   class="row UserEdit top">
 
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
