@@ -23,7 +23,13 @@ class UserController extends Controller
         $clients = Client::with('user')->paginate(20);
         return view('admin.users', compact('clients'));
     }
+    function showClient($id){
+        $countries = Country::all();
+        $sectors = Sector::lists('name','id');
+        $client = Client::find($id);
 
+        return view('admin.user', compact('client','countries','sectors'));
+    }
     function updatePayClient(Request $request)
     {
         $client = Client::find($request->input('idUser'));
@@ -166,13 +172,7 @@ class UserController extends Controller
         })->export('xls');
         $date = Date::now()->format('l j F H:i:s');
     }
-    function showClient($id){
-        $countries = Country::all();
-        $sectors = Sector::lists('name','id');
-        $client = Client::find($id);
 
-        return view('admin.user', compact('client','countries','sectors'));
-    }
     protected function validator(array $data)
     {
 
@@ -226,5 +226,6 @@ class UserController extends Controller
         return $v;
 
     }
+
 }
 
