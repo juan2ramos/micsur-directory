@@ -29,7 +29,7 @@
 
                 <div class="Directory-userInfo col-8">
                     <h3>{{$user->user->name}}</h3>
-                    <p><span>Pais</span>{{$user->countryName->name}}</p>
+                    {{--<p><span>Pais</span>{{$user->countryName->name}}</p>--}}
                     <p><span>Compañia</span>{{$user->company}}</p>
                     <p><span>Dirección</span>{{$user->address}}</p>
                     <p><span>Sitio web</span><a href="{{$user->website}}" target="_blank">{{$user->website}}</a></p>
