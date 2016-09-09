@@ -14,4 +14,9 @@ class DirectoryController extends Controller
         $users = Client::with(['user','sectors','countryName'])/*->orderBy('company', 'ASC')*/->paginate(20);
         return view('front.directory',compact('users'));
     }
+    public function user($id){
+        $user = Client::find($id);
+        return view('front.directoryUser',compact('user'));
+    }
+
 }

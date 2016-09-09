@@ -708,6 +708,16 @@ body {
   border: 2px solid #6d6e71 !important;
   border-radius: 0 !important; }
 
+.Directory input {
+  height: 2.25rem;
+  width: 90%;
+  padding: 0.625rem; }
+
+.Directory h1 {
+  margin: 2.25rem 0.625rem;
+  font-weight: 500;
+  color: #665; }
+
 .Directory li {
   padding: 1rem;
   position: relative; }
@@ -750,6 +760,19 @@ body {
 .Directory-userInfo {
   padding: 0 0.9375rem 0.625rem; }
 
+.Directory-MeProfile {
+  padding: 0.75rem 1.25rem 0.625rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #666655;
+  font-size: 1.25rem; }
+
+.Directory-form button {
+  background: #1685e3;
+  color: white;
+  padding: 0.625rem 1.625rem;
+  margin: 1.25rem 1.875rem 1.5625rem; }
+
 .Directory-profile {
   position: absolute;
   right: 2.5rem;
@@ -759,5 +782,25 @@ body {
   background: #1685e3;
   color: white;
   text-transform: capitalize; }
+
+.Directory.Directory-user article {
+  height: auto;
+  max-height: inherit; }
+
+.Directory.Directory-user figure {
+  max-height: inherit;
+  overflow: visible; }
+
+.Directory.Directory-user h3 {
+  font-size: 2rem; }
+
+.Directory.Directory-user .Directory-userInfo a {
+  color: #1685e3;
+  text-decoration: underline; }
+
+p.Directory-activity {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  max-height: inherit; }
 
 /*# sourceMappingURL=style.css.map */

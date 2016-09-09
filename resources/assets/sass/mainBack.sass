@@ -163,6 +163,14 @@ body
 
 
 .Directory
+  input
+    height: rem(36)
+    width: 90%
+    padding: rem(10)
+  h1
+    margin: rem(36) rem(10)
+    font-weight: 500
+    color: #665
   li
     padding: 1rem
     position: relative
@@ -198,6 +206,18 @@ body
     font-size: rem(12)
 .Directory-userInfo
   padding: 0  rem(15) rem(10)
+.Directory-MeProfile
+  padding: rem(12) rem(20) rem(10)
+  text-transform: capitalize
+  font-weight: 300
+  color: #666655
+  font-size: rem(20)
+
+.Directory-form button
+  background: #1685e3
+  color: white
+  padding: rem(10) rem(26)
+  margin: rem(20) rem(30) rem(25)
 .Directory-profile
   position: absolute
   right: rem(40)
@@ -207,4 +227,23 @@ body
   background: #1685e3
   color: white
   text-transform: capitalize
+
+.Directory.Directory-user
+  article
+    height: auto
+    max-height: inherit
+  figure
+    max-height: inherit
+    overflow: visible
+  h3
+    font-size: 2rem
+  .Directory-userInfo a
+    color: #1685e3
+    text-decoration: underline
+
+p.Directory-activity
+  font-size: 1rem
+  line-height: rem(22)
+  max-height: inherit
+
 

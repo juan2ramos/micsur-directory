@@ -2,11 +2,23 @@
 
 @section('content')
     <section class="Directory">
-        <h1>DIRECTORIO</h1>
-        <form action="" class="row middle">
-            <label class="col-4" for=""><input type="text" name="name"></label>
-            <label class="col-4" for=""> <input type="text" name="country"></label>
-            <label class="col-4" for=""> <input type="text" name="sector"></label>
+        <div class="row between middle">
+            <h1>DIRECTORIO</h1>
+            <a class="Directory-MeProfile" href="{{route('profile')}}" >{{Auth::user()->name}}</a>
+        </div>
+        <form action="" class="row middle center Directory-form">
+            <label class="col-4" for="">
+                <input class="col-10" type="text" name="name" placeholder="Nombre">
+            </label>
+            <label class="col-4" for="">
+                <input class="col-10" type="text" name="country" placeholder="País">
+            </label>
+            <label class="col-4" for="">
+                <input class="col-10" type="text" name="sector" placeholder="Sector">
+            </label>
+            <div class="col-12 row end">
+                <button>BUSCAR</button>
+            </div>
         </form>
         <ul class="row">
             @foreach($users as $user)
@@ -22,7 +34,7 @@
                             <p>{{$user->activities}}</p>
                             <div class="row">
                                 @foreach($user->sectors as $sector)
-                                    <span >{{$sector->name}}</span>
+                                    <span>{{$sector->name}}</span>
                                 @endforeach
                             </div>
                             <div>
@@ -30,7 +42,7 @@
                             </div>
                         </div>
                     </article>
-                    <a href="" class="Directory-profile"> Ver perfil </a>
+                    <a href="{{route('directoryUser',['id' => $user->id])}}" class="Directory-profile"> Ver perfil </a>
                 </li>
             @endforeach
         </ul>

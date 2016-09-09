@@ -18,3 +18,8 @@ Route::get('directorio', [
     'uses' => 'DirectoryController@index',
     'as' => 'directory'
 ]);
+
+Route::get('usuario/{id}', [
+    'uses' => 'DirectoryController@user',
+    'as' => 'directoryUser'
+]);
