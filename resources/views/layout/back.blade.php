@@ -23,6 +23,9 @@
             @if(Auth::user()->role_id == 2)
                 <li><a href="{{route('profile')}}">Mi Perfil</a></li>
             @endif
+            @if(Auth::user()->role_id == 2)
+                <li><a href="{{route('directory')}}">Directorio</a></li>
+            @endif
             <li><a href="{{route('logout')}}">Cerrar Sesión</a></li>
         </ul>
     </div>

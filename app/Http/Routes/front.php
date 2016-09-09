@@ -13,3 +13,8 @@ Route::post('mi-perfil', [
     'uses' => 'UserController@update',
     'as' => 'profilePost'
 ]);
+
+Route::get('directorio', [
+    'uses' => 'DirectoryController@index',
+    'as' => 'directory'
+]);

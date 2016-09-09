@@ -13,6 +13,9 @@ class Client extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+    public function countryName(){
+        return $this->belongsTo(Country::class, 'country');
+    }
 
     public function sectors(){
         return $this->belongsToMany(Sector::class)->withTimestamps();
