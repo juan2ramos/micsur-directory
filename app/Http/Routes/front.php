@@ -18,6 +18,10 @@ Route::get('directorio', [
     'uses' => 'DirectoryController@index',
     'as' => 'directory'
 ]);
+Route::post('directorio', [
+    'uses' => 'DirectoryController@filterUser',
+    'as' => 'directoryPost'
+]);
 
 Route::get('usuario/{id}', [
     'uses' => 'DirectoryController@user',

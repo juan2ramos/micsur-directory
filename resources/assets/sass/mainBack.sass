@@ -213,11 +213,25 @@ body
   color: #666655
   font-size: rem(20)
 
-.Directory-form button
-  background: #1685e3
-  color: white
-  padding: rem(10) rem(26)
-  margin: rem(20) rem(30) rem(25)
+.Directory-form
+  button
+    background: #1685e3
+    color: white
+    padding: rem(10) rem(26)
+    margin: rem(20) rem(30) rem(25)
+  .select2
+    width: 83.3333333333% !important
+    height: rem(10) !important
+  .select2-selection
+    border-width: rem(1) !important
+  input
+    width: 83.3333333333% !important
+    margin-top: rem(26)
+    padding: rem(7) rem(20)
+    border: 0.0625rem #6d6e71 solid
+  .select2-search__field
+    margin-top: rem(8) !important
+
 .Directory-profile
   position: absolute
   right: rem(40)
@@ -237,13 +251,34 @@ body
     overflow: visible
   h3
     font-size: 2rem
-  .Directory-userInfo a
-    color: #1685e3
-    text-decoration: underline
+  .Directory-userInfo
+    a
+      color: #1685e3
+      text-decoration: underline
+    article
+      padding: 0
+      box-shadow: none
 
 p.Directory-activity
   font-size: 1rem
   line-height: rem(22)
   max-height: inherit
+.Send-email
+  input
+    margin: rem(6) 0
+    color: gray
+  textarea
+    margin: rem(6) 0
+    height: rem(100)
+    border: rem(1) solid #efefef
+    padding: rem(6) rem(12)
+    color: gray
+  h4
+    color: #fdd200
+    font-size: rem(16)
+    font-weight: 400
+  button
+    background: #fdd200
+    padding: rem(6) rem(12)
 
 

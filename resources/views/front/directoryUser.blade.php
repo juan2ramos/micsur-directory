@@ -6,20 +6,6 @@
             <h1>DIRECTORIO</h1>
             <a class="Directory-MeProfile" href="{{route('profile')}}">{{Auth::user()->name}}</a>
         </div>
-        <form action="" class="row middle center Directory-form">
-            <label class="col-4" for="">
-                <input class="col-10" type="text" name="name" placeholder="Nombre">
-            </label>
-            <label class="col-4" for="">
-                <input class="col-10" type="text" name="country" placeholder="País">
-            </label>
-            <label class="col-4" for="">
-                <input class="col-10" type="text" name="sector" placeholder="Sector">
-            </label>
-            <div class="col-12 row end">
-                <button>BUSCAR</button>
-            </div>
-        </form>
         <div>
             <article class="row">
 
@@ -28,13 +14,21 @@
                 </figure>
 
                 <div class="Directory-userInfo col-8">
-                    <h3>{{$user->user->name}}</h3>
-                    {{--<p><span>Pais</span>{{$user->countryName->name}}</p>--}}
-                    <p><span>Compañia</span>{{$user->company}}</p>
-                    <p><span>Dirección</span>{{$user->address}}</p>
-                    <p><span>Sitio web</span><a href="{{$user->website}}" target="_blank">{{$user->website}}</a></p>
-                    <p><span>Email</span><a href="mailto:{{$user->user->email}}">{{$user->user->email}}</a></p>
+                    <section class="row">
+                        <article class="col-6">
+                            <h3>{{$user->user->name}}</h3>
+                            <p><span>Pais</span>{{$user->countryName->name}}</p>
+                            <p><span>Compañia</span>{{$user->company}}</p>
+                            <p><span>Dirección</span>{{$user->address}}</p>
+                            <p><span>Sitio web</span><a href="{{$user->website}}" target="_blank">{{$user->website}}</a>
+                            </p>
 
+                            <p><span>Email</span><a href="mailto:{{$user->user->email}}">{{$user->user->email}}</a></p>
+                        </article>
+                        <article class="col-6">
+                            {{--@include('formMessage')--}}
+                        </article>
+                    </section>
                     <div class="row">
                         @foreach($user->sectors as $sector)
                             <span>{{$sector->name}}</span>
@@ -49,4 +43,13 @@
         </div>
     </section>
 
+@endsection
+@section('scripts')
+    <script src="{{asset('js/flatpickr.js')}}"></script>
+    <script>
+        $(".calendar").flatpickr();
+    </script>
+@endsection
+@section('styles')
+    <link href="https://chmln.github.io/flatpickr/dist/flatpickr.min.css" rel="stylesheet"/>
 @endsection

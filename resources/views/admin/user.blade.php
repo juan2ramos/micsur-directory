@@ -145,7 +145,7 @@
 @section('scripts')
     <script src="{{asset('js/formUsers.js')}}"></script>
     <script src="{{asset('js/images.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="{{'js/select2.min.js'}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
     <script type="text/javascript">
         $('#sector').select2({
@@ -155,5 +155,5 @@
     </script>
 @endsection
 @section('styles')
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet"/>
+    <link href="{{asset('css/select2.min.css')}}" rel="stylesheet"/>
 @endsection
