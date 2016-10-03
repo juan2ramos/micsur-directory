@@ -40,7 +40,12 @@
                     <article class="row">
 
                         <figure class="col-4">
-                            <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
+                            @if( !empty($user->user['image-profile']))
+                                <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
+                            @else
+                                <img src="{{asset('images/micsur.png')}}" alt="">
+                            @endif
+
                         </figure>
 
                         <div class="Directory-userInfo col-8">

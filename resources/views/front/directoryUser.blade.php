@@ -10,13 +10,19 @@
             <article class="row">
 
                 <figure class="col-4">
-                    <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
+                    @if( !empty($user->user['image-profile']))
+                        <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
+                    @else
+                        <img src="{{asset('images/micsur.png')}}" alt="">
+                    @endif
+
+
                 </figure>
 
                 <div class="Directory-userInfo col-8">
                     <section class="row">
                         <article class="col-6">
-                            <h3>{{$user->user->name}}</h3>
+                            <h3>{{$user->user->name . ' ' . $user->user['last-name'] }} </h3>
                             <p><span>Pais</span>{{$user->countryName->name}}</p>
                             <p><span>Compañia</span>{{$user->company}}</p>
                             <p><span>Dirección</span>{{$user->address}}</p>
