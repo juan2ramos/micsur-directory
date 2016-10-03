@@ -14,7 +14,8 @@ class DirectoryController extends Controller
 {
     public function index()
     {
-        $users = Client::with(['user', 'sectors', 'countryName'])/*->orderBy('company', 'ASC')*/
+        $users = Client::with(['user', 'sectors', 'countryName'])
+            ->where('validate',1)
         ->paginate(20);
         $countries = Countries::all();
         $sectors = Sector::lists('name', 'id');
@@ -29,6 +30,7 @@ class DirectoryController extends Controller
         $countries = Countries::all();
         $sectors = Sector::lists('name', 'id');
         $users = Client::with(['user', 'sectors', 'countryName'])
+            ->where('validate',1)
             ->whereHas('user', function ($q) use ($name) {
                 $q->whereRaw("name like '%$name%'");
             });
