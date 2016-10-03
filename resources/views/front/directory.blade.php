@@ -49,7 +49,7 @@
                         </figure>
 
                         <div class="Directory-userInfo col-8">
-                            <h3>{{$user->user->name}}</h3>
+                            <h3>{{$user->user->name . ' ' . $user->user['last-name']}}</h3>
                             <p>{{$user->activities}}</p>
                             <div class="row">
                                 @foreach($user->sectors as $sector)
