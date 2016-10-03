@@ -17,13 +17,14 @@ Route::post('mi-perfil', [
 Route::get('directorio', [
     'uses' => 'DirectoryController@index',
     'as' => 'directory'
-]);
+])->middleware('directory');
+
 Route::post('directorio', [
     'uses' => 'DirectoryController@filterUser',
     'as' => 'directoryPost'
-]);
+])->middleware('directory');;
 
 Route::get('usuario/{id}', [
     'uses' => 'DirectoryController@user',
     'as' => 'directoryUser'
-]);
+])->middleware('directory');
