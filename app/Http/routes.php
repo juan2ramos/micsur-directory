@@ -26,6 +26,7 @@ Route::get('pass', function () {
         $user->password = bcrypt($user->password);
         $user->save();
     }
+
     dd('ok');
 });
 
