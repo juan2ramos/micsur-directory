@@ -18,16 +18,6 @@ Route::get('/', [
     ]
 );
 
-Route::get('pass', function () {
-    $users = \Illuminate\Foundation\Auth\User::where('id', '>', '459')->get();
-
-    foreach ($users as $user) {
-        print_r($user->password);
-        $user->password = bcrypt($user->password);
-        $user->save();
-    }
-    dd('ok');
-});
 
 Route::get('lang/{lang}', function ($lang) {
     session(['lang' => $lang]);
