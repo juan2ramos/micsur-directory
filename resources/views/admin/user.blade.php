@@ -145,7 +145,7 @@
 @section('scripts')
     <script src="{{asset('js/formUsers.js')}}"></script>
     <script src="{{asset('js/images.js')}}"></script>
-    <script src="{{'js/select2.min.js'}}"></script>
+    <script src="{{asset('js/select2.min.js')}}"></script>
     <script src="{{asset('js/form.js')}}"></script>
     <script type="text/javascript">
         $('#sector').select2({

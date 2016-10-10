@@ -89,7 +89,7 @@ class UserController extends Controller
         $user->name = $data['name'];
         $user['last-name'] = $data['last-name'];
 
-        if(empty($data->password)){
+        if(!empty($data['password'])){
             $user->password = bcrypt($data['password']);
             $user['password_2'] = md5($data['password']);
 
