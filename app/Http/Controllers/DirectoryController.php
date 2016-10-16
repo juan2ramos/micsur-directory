@@ -45,7 +45,7 @@ class DirectoryController extends Controller
                 $q->whereIn('sector_id', $sector);
             });
         }
-        $users = $users->paginate(50);
+        $users = $users->paginate(20);
         return view('front.directory', compact('users', 'countries', 'sectors'));
 
     }

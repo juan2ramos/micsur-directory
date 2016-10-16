@@ -6,8 +6,8 @@
         <h1>DIRECTORIO</h1>
         <a class="Directory-MeProfile" href="{{route('profile')}}">{{Auth::user()->name}}</a>
     </div>
-    <form action="{{route('directoryPost')}}" method="post" class="row middle center Directory-form">
-        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <form action="{{route('directoryPost')}}" method="get" class="row middle center Directory-form">
+
         <label class="col-4" for="">
             <input class="col-10" type="text" name="name" value="{{old('name')}}" placeholder="Nombre">
         </label>
@@ -66,7 +66,8 @@
             @endforeach
         </ul>
     </section>
-    {!! $users->render() !!}
+
+    {!! $users->appends(Request::input())->links() !!}
 
 @endsection
 @section('scripts')

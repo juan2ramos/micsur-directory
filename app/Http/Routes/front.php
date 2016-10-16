@@ -19,7 +19,7 @@ Route::get('directorio', [
     'as' => 'directory'
 ])->middleware('directory');
 
-Route::post('directorio', [
+Route::get('directorio-buscar', [
     'uses' => 'DirectoryController@filterUser',
     'as' => 'directoryPost'
 ])->middleware('directory');;
