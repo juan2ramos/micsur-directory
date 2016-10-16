@@ -733,9 +733,11 @@ body {
 
 .Directory article {
   box-shadow: 0.125rem 0.125rem 0.625rem 0.125rem #e8e8e8;
-  padding: 1.25rem;
-  max-height: 15rem;
-  height: 15.625rem; }
+  padding: 1.25rem; }
+  @media (min-width: 45rem) {
+    .Directory article {
+      max-height: 15rem;
+      height: 15.625rem; } }
 
 .Directory figure {
   max-height: 13.75rem;

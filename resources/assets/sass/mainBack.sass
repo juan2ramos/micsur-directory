@@ -183,8 +183,10 @@ body
   article
     box-shadow: rem(2) rem(2) rem(10) rem(2) #e8e8e8
     padding: rem(20)
-    max-height: rem(240)
-    height: rem(250)
+
+    @include respond-to(medium)
+      max-height: rem(240)
+      height: rem(250)
   figure
     max-height: rem(220)
     overflow: hidden
@@ -204,6 +206,7 @@ body
     color: #585858
     font-weight: 300
     margin: rem(6) 0 rem(8)
+
   span
     color: #313030
     background: #fdd200
@@ -303,3 +306,4 @@ p.Directory-activity
   display: block
 .flatpickr-current-month
   display: inline !important
+

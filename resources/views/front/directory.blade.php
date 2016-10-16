@@ -39,7 +39,7 @@
                 <li class="col-6 small-12">
                     <article class="row">
 
-                        <figure class="col-4">
+                        <figure class="col-4 small-12">
                             @if( !empty($user->user['image-profile']))
                                 <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
                             @else
@@ -48,7 +48,7 @@
 
                         </figure>
 
-                        <div class="Directory-userInfo col-8">
+                        <div class="Directory-userInfo col-8  small-12">
                             <h3>{{$user->user->name . ' ' . $user->user['last-name']}}</h3>
                             <p>{{$user->activities}}</p>
                             <div class="row">
