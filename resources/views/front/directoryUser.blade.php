@@ -9,7 +9,7 @@
         <div>
             <article class="row">
 
-                <figure class="col-4">
+                <figure class="col-4 small-12">
                     @if( !empty($user->user['image-profile']))
                         <img src="{{asset('uploads/profiles/' . $user->user['image-profile'])}}" alt="">
                     @else
@@ -19,9 +19,9 @@
 
                 </figure>
 
-                <div class="Directory-userInfo col-8">
+                <div class="Directory-userInfo col-8 small-12">
                     <section class="row">
-                        <article class="col-6">
+                        <article class="col-6 small-12">
                             <h3>{{$user->user->name . ' ' . $user->user['last-name'] }} </h3>
                             <p><span>Pais</span>{{$user->countryName->name}}</p>
                             <p><span>Compañia</span>{{$user->company}}</p>
@@ -31,8 +31,10 @@
 
                             <p><span>Email</span><a href="mailto:{{$user->user->email}}">{{$user->user->email}}</a></p>
                         </article>
-                        <article class="col-6">
-                            {{--@include('formMessage')--}}
+                        <article class="col-6 small-12">
+                            @if(Auth::user()->role_id == 1)
+                                @include('formMessage')
+                            @endif
                         </article>
                     </section>
                     <div class="row">
@@ -40,7 +42,7 @@
                             <span>{{$sector->name}}</span>
                         @endforeach
                     </div>
-                    <p class="col-12 Directory-activity">{{$user->activities}}</p>
+                    <p class="col-12 small-12 Directory-activity">{{$user->activities}}</p>
                 </div>
 
             </article>
@@ -51,6 +53,7 @@
 
 @endsection
 @section('scripts')
+    <script src="{{asset('js/sendmail.js')}}"></script>
     <script src="{{asset('js/flatpickr.js')}}"></script>
     <script>
         $(".calendar").flatpickr();

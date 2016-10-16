@@ -14,6 +14,9 @@ $gray : rgb(109, 110, 113)
   position: relative
   figure
     max-width: rem(180)
+    margin: rem(8) auto rem(20)
+    @include respond-to(medium)
+      margin: 0
 .Header-content
   max-width: $widthContent
   margin: auto
@@ -26,6 +29,9 @@ body
   font-size: .875rem
 
 .Nav-back
+  margin: auto
+  @include respond-to(medium)
+    margin: 0
   a
     padding: rem(8)
     color: black
@@ -282,3 +288,18 @@ p.Directory-activity
     padding: rem(6) rem(12)
 
 
+
+.error
+  background: red !important
+  color: white !important
+  display: none
+#SendMailMessage
+  text-align: right
+  font-weight: 400
+  font-size: rem(20)
+  color: #c5d257
+  display: none
+.error.show
+  display: block
+.flatpickr-current-month
+  display: inline !important

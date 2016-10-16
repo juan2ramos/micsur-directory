@@ -28,3 +28,8 @@ Route::get('usuario/{id}', [
     'uses' => 'DirectoryController@user',
     'as' => 'directoryUser'
 ])->middleware('directory');
+
+Route::post('sendMail',[
+    'uses' => 'SendMessageController@messageDirectory',
+    'as' => 'sendMail'
+]);

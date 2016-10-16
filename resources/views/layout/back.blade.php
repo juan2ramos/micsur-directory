@@ -18,7 +18,7 @@
             <img src="http://micsur.org/wp-content/themes/micsur2016/assets/images/logo-micsur.png"
                  alt="Logo Micsur Bogotá">
         </figure>
-        <ul class="Nav-back row">
+        <ul class="Nav-back row center">
             <li><a href="http://micsur.org">Micsur</a></li>
             @if(Auth::user()->role_id == 2)
                 <li><a href="{{route('profile')}}">Mi Perfil</a></li>

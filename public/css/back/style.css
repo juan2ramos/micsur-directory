@@ -551,7 +551,11 @@ main {
   background: #fdd200;
   position: relative; }
   .Header figure {
-    max-width: 11.25rem; }
+    max-width: 11.25rem;
+    margin: 0.5rem auto 1.25rem; }
+    @media (min-width: 45rem) {
+      .Header figure {
+        margin: 0; } }
 
 .Header-content {
   max-width: 60rem;
@@ -566,11 +570,16 @@ main {
 body {
   font-size: .875rem; }
 
-.Nav-back a {
-  padding: 0.5rem;
-  color: black;
-  font-size: 1rem;
-  font-weight: 500; }
+.Nav-back {
+  margin: auto; }
+  @media (min-width: 45rem) {
+    .Nav-back {
+      margin: 0; } }
+  .Nav-back a {
+    padding: 0.5rem;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500; }
 
 .Pay h1 {
   font-size: 1.625rem;
@@ -842,5 +851,23 @@ p.Directory-activity {
 .Send-email button {
   background: #fdd200;
   padding: 0.375rem 0.75rem; }
+
+.error {
+  background: red !important;
+  color: white !important;
+  display: none; }
+
+#SendMailMessage {
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #c5d257;
+  display: none; }
+
+.error.show {
+  display: block; }
+
+.flatpickr-current-month {
+  display: inline !important; }
 
 /*# sourceMappingURL=style.css.map */
