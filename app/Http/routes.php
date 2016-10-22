@@ -13,7 +13,7 @@ Route::group(['middleware' => ['admin'], 'prefix' => 'admin'], function () {
 });
 
 Route::get('/', [
-        'uses' => 'HomeController@index',
+        'uses' => 'Auth\AuthController@getLogin',
         'as' => 'home'
     ]
 );
