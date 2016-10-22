@@ -32,9 +32,9 @@
                             <p><span>Email</span><a href="mailto:{{$user->user->email}}">{{$user->user->email}}</a></p>
                         </article>
                         <article class="col-6 small-12">
-                            {{--@if(Auth::user()->role_id == 1)--}}
+                            @if(Auth::user()->role_id == 1)
                                 @include('formMessage')
-                            {{--@endif--}}
+                            @endif
                         </article>
                     </section>
                     <div class="row">
